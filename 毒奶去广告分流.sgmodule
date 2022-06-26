@@ -1,6 +1,0 @@
-#!name=毒奶去广告
-#!desc=x x
-
-[Rule]
-# > 毒奶去广告
-RULE-SET,https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adblock4limbo_surge.list,REJECT
