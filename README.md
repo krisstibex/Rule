@@ -5,7 +5,7 @@
 
 [![Miku404‘s GitHub stats](https://github-readme-stats.vercel.app/api?username=krisstibex&show_icons=true&count_private=true&theme=vue)](https://github.com/krisstibex/Profiles)
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=krisstibex&layout=compact&theme=vue)](https://github.com/krisstibex)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=krisstibex&layout=compact&theme=vue)](https://github.com/krisstibex/404Zone)
 
 # 免责声明
 - 本仓库中涉及的任何解锁和解密分析脚本仅用于资源共享和学习研究，不能保证其合法性，准确性，完整性和有效性，请根据情况自行判断。
