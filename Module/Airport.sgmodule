@@ -3,12 +3,12 @@
 #支持同时显示多个机场流量 去掉#即可使用
 #URL编码快捷指令 : https://www.icloud.com/shortcuts/85e2973351df4b46b3a1e2b72d4f35a1
 [Panel]
-#Sub_info = script-name=Sub_info
+Sub_info = script-name=Sub_info
 #Sub_info = script-name=Sub_info1
-Sub_info = script-name=Sub_info2
+#Sub_info = script-name=Sub_info2
 [Script]
-#Sub_info = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/sub_info_panel.js,script-update-interval=0,argument=url=URL编码后的订阅链接&reset_day=重制日期&title=标题
+Sub_info = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/sub_info_panel.js,script-update-interval=0,argument=url=URL编码后的订阅链接&reset_day=重制日期&title=标题
 
 #Sub_info1 = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/sub_info_panel.js,script-update-interval=0,argument=url=URL编码后的订阅链接&reset_day=重制日期&title=标题
 
-Sub_info2 = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/sub_info_panel.js,script-update-interval=0,argument=url=URL编码后的订阅链接&reset_day=重制日期&title=标题
+#Sub_info2 = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/sub_info_panel.js,script-update-interval=0,argument=url=URL编码后的订阅链接&reset_day=重制日期&title=标题
