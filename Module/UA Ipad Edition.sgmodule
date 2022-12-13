@@ -1,6 +1,6 @@
 #!name=浏览器UA
 
-#!desc=Ipad
+#!desc=Ipad版本的模块 前提是你要忍受ipad quark和手机一样的排版
 
 [Header Rewrite]
 # > 知乎（部分替换为Ipad百度 Quark 的 User-Agent）
