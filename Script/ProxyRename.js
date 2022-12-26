@@ -92,7 +92,7 @@ var others = {
   家宽: 'Fam',
   LB: 'LB',
   IPLC: 'Spec',
-  'IEPL': 'Spec',
+  IEPL: 'Spec',
   沪日: 'SH-Japan',
   沪韩: 'SH-Korea',
   沪美: 'SH-United States',
