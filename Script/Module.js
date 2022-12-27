@@ -1,5 +1,5 @@
 let req = $request.url.replace(/qx$/,'')
-let name = '#!name= ' + req.match(/.+\/(.+)\.conf/)[1];
+let name = '#!name= ' + req.match(/.+\/(.+)\.(conf|js)/)?.[1] || '无名'
 !(async () => {
   let body = await http(req);
 
@@ -13,7 +13,7 @@ let MITM = "";
 
 body.forEach((x, y, z) => {
 	let type = x.match(
-		/script-|enabled=|reject|echo-response|url-and-header|hostname|url\s(302|307)|(request|\Bresponse)-body/
+		/script-|enabled=|reject|echo-response|url\srequest-header|hostname|url\s(302|307)|\s(request|response)-body/
 	)?.[0];
 	if (type) {
 		switch (type) {
@@ -57,7 +57,7 @@ body.forEach((x, y, z) => {
 				URLRewrite.push(x.replace(/(\^?http[^\s]+).+/, "$1 - reject"));
 				break;
 
-			case "url-and-header":
+			case "url request-header":
 				z[y - 1]?.match("#") && HeaderRewrite.push(z[y - 1]);
 				HeaderRewrite.push(
 					x.replace(
@@ -72,7 +72,7 @@ body.forEach((x, y, z) => {
 				MapLocal.push(x.replace(/(\^?http[^\s]+).+(http.+)/, '$1 data="$2"'));
 				break;
 			case "hostname":
-				MITM = x.replace(/hostname = (.+)/, `[MITM]\nhostname = %APPEND% $1`);
+				MITM = x.replace(/hostname\s?=(.*)/, `[MITM]\nhostname = %APPEND% $1`);
 				break;
 			default:
 				if (type.match("url ")) {
@@ -106,7 +106,7 @@ ${URLRewrite}
 ${HeaderRewrite}
 ${MapLocal}
 ${MITM}`;
-console.log(body)
+
 
 
  $done({ response: { status: 200 ,body:body} });
