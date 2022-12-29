@@ -1,4 +1,4 @@
-let req = $request.url.replace(/qx$/,'')
+et req = $request.url.replace(/qx$/,'')
 let name = '#!name= ' + req.match(/.+\/(.+)\.(conf|js)/)?.[1] || '无名';
 !(async () => {
   let body = await http(req);
@@ -94,7 +94,7 @@ let op = x.match(/\sresponse-header/) ?
 					z[y - 1]?.match("#") && script.push(z[y - 1]);
 					script.push(
 						x.replace(
-							/(\^?http[^\s]+)\surl\s(response|request)-body\s(.+)\2-body(.+)/,
+							/([^\s]+)\surl\s(response|request)-body\s(.+)\2-body(.+)/,
 							`test = type=$2,pattern=$1,requires-body=1,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/replace-body.js, argument=$3->$4`,
 						),
 					);
