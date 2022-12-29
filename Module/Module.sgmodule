@@ -2,8 +2,10 @@
 #!desc=使用方法:在链接最后面加上qx
 #作者 TG:小白脸
 
+
 [Script]
 QX转换 = type=http-request,pattern=qx$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/krisstibex/404Zone/main/Script/Module.js
+
 
 [MITM]
 hostname = %APPEND% github.com:443, raw.githubusercontent.com:443
