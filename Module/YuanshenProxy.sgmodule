@@ -1,0 +1,10 @@
+#!name=原神国际服模块
+#!desc=本模块只在游玩的时候开启 如果不能游玩请多尝试几次
+
+[Rule]
+# > 可将Proxy设定为任意一非直连策略组
+DOMAIN-SUFFIX,yuanshen.com,Proxy
+DOMAIN-SUFFIX,hoyoverse.com,Proxy
+# > 以下为补充规则 开启后或许可以优化游戏延迟
+##PROTOCOL,UDP,DIRECT
+FINAL,DIRECT
