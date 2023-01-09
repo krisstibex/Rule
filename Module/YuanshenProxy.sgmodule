@@ -5,6 +5,6 @@
 # > 可将Proxy设定为任意一非直连策略组
 DOMAIN-SUFFIX,yuanshen.com,Proxy
 DOMAIN-SUFFIX,hoyoverse.com,Proxy
-# > 以下为补充规则 或许可以优化游戏延迟
-PROTOCOL,UDP,DIRECT
+# > 建议下面的Proxy替换成Hk Tw的策略组
+DEST-PORT,22101,Proxy
 FINAL,DIRECT
