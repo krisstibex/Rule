@@ -1,0 +1,9 @@
+#!name=Bili CDN
+#!desc=禁用b站垃圾cdn
+
+[Proxy]
+✂️ NO-DROP = reject-no-drop
+
+[Rule]
+# OR,((AND,((OR,((DOMAIN-KEYWORD,-gd-), (DOMAIN-KEYWORD,-cm-), (DOMAIN-KEYWORD,-cu-), (DOMAIN-KEYWORD,-ct-))), (DOMAIN-KEYWORD,bilivideo.c))), (DOMAIN-SUFFIX,szbdyd.com), (DEST-PORT,4480), (DEST-PORT,4483)),✂️ NO-DROP // 禁用b站垃圾cdn
+OR,((AND,((OR,((DOMAIN-KEYWORD,-gd-), (DOMAIN-KEYWORD,-cm-), (DOMAIN-KEYWORD,-cu-), (DOMAIN-KEYWORD,-ct-))), (DOMAIN-KEYWORD,bilivideo.c))), (DOMAIN-SUFFIX,szbdyd.com), (DEST-PORT,4480)),✂️ NO-DROP // 禁用b站垃圾cdn
