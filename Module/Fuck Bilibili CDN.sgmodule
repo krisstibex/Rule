@@ -1,5 +1,5 @@
 #!name=Bili CDN
-#!desc=禁用b站垃圾cdn
+#!desc=禁用b站垃圾cdn 请勿直接添加模块
 
 [Proxy]
 ✂️ NO-DROP = reject-no-drop
