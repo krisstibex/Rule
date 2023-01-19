@@ -1,5 +1,6 @@
 # NAME: Goose Goose Duck
 # AUTHOR: Miku404
+# 出现游玩时中断请添加: PROTOCOL,UDP,Proxy
 DOMAIN-SUFFIX,googleapis.com
 DOMAIN-SUFFIX,gaggle.fun
 DOMAIN-SUFFIX,cloudfunctions.net
