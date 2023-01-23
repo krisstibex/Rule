@@ -2,3 +2,4 @@ https://raw.githubusercontent.com/sub-store-org/Sub-Store/master/config/Surge.sg
 https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.rewrite.surge.sgmodule
 https://raw.githubusercontent.com/krisstibex/404Zone/main/Module/All%20in%20One%20Search.sgmodule
 https://raw.githubusercontent.com/bai1zi/shadowrocket-surge-loon-qx/main/YouTubeads.sgmodule
+https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-lyric.js
