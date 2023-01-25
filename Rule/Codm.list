@@ -1,0 +1,7 @@
+# NAME: Call of Duty Mobile
+# AUTHOR: Miku404
+DOMAIN-KEYWORD,activision
+DOMAIN-KEYWORD,codm
+DOMAIN-SUFFIX,activision.com
+DOMAIN-SUFFIX,codmwest.com
+DEST-PORT,7500
