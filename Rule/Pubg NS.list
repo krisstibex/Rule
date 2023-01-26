@@ -1,5 +1,6 @@
 # NAME: PUBG New State
 # AUTHOR: Miku404
+# 出现游玩时中断请添加: PROTOCOL,UDP,Proxy
 DEST-PORT,5000
 DOMAIN-KEYWORD,new-state
 DOMAIN-SUFFIX,pubg-ns-gate.com
