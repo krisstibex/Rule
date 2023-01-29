@@ -72,4 +72,4 @@ Bili Search = type=http-request,pattern=^https:\/\/ap(p|i)\.bili(bili|api)\.(com
 
 [MITM]
 
-hostname = %APPEND% app.bilibili.com,api.live.bilibili.com,api.vc.bilibili.com, *.bilibili.com, *.bilibili.*, grpc.biliapi.net,*biliapi.net, -broadcast.chat.bilibili.com, -*cdn*.biliapi.net, -*tracker*.biliapi.net
+hostname = %APPEND% app.bilibili.com,api.live.bilibili.com,api.vc.bilibili.com, *.bilibili.com, *.bilibili.*, grpc.biliapi.net,*biliapi.net, -broadcast.chat.bilibili.com, -*cdn*.biliapi.net, -*tracker*.biliapi.net ,ap?.bili*i.com, ap?.bili*i.net
