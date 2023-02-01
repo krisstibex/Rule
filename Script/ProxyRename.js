@@ -82,6 +82,7 @@ for (let i in inputList) {
 
 // 其它
 var others = {
+  Premium: 'Pre',
   专线: 'Spec',
   核心: 'Kern',
   边缘: 'Edge',
