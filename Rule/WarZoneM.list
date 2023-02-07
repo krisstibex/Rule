@@ -1,0 +1,8 @@
+# NAME: WarZone Mobile
+# AUTHOR: Miku404
+# PROTOCOL,UDP,PROXY // 网络体验不佳请取消注释此规则
+DEST-PORT,123
+DOMAIN-SUFFIX,callofduty.com
+DOMAIN-SUFFIX,cloudfront.net
+DOMAIN-SUFFIX,activision.com
+DOMAIN-SUFFIX,demonware.net
