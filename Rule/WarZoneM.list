@@ -2,7 +2,7 @@
 # AUTHOR: Miku404
 # PROTOCOL,UDP,PROXY // 网络体验不佳请取消注释此规则
 DEST-PORT,123
-DEST-PORT,3047
+DEST-PORT,3074
 DOMAIN-SUFFIX,callofduty.com
 DOMAIN-SUFFIX,cloudfront.net
 DOMAIN-SUFFIX,activision.com
