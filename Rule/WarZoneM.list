@@ -1,6 +1,5 @@
 # NAME: WarZone Mobile
 # AUTHOR: Miku404
-DEST-PORT,123
 DEST-PORT,3074
 DOMAIN-SUFFIX,callofduty.com
 DOMAIN-SUFFIX,cloudfront.net
