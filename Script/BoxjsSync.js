@@ -1,12 +1,11 @@
 const $ = new Env('gist')
 
-const KEY_INITED = `@xream.gist.inited`
-const KEY_USERNAME = `@xream.gist.username`
-const KEY_TOKEN = `@xream.gist.token`
-const KEY_DESC = `@xream.gist.desc`
-const KEY_SAVE_KEY = `@xream.gist.saveKey`
+const KEY_USERNAME = `@gist.username`
+const KEY_TOKEN = `@gist.token`
+const KEY_DESC = `Auto Generated BoxJs Global Backup`
+const KEY_SAVE_KEY = `backup.json`
 
-$.setdata(new Date().toLocaleString('zh'), KEY_INITED)
+$.setdata(new Date().toLocaleString('zh'))
 
 !(async () => {
   const desc = $.getdata(KEY_DESC) || 'Auto Generated BoxJs Global Backup'
