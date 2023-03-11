@@ -2,8 +2,8 @@ const $ = new Env('gist')
 
 const KEY_USERNAME = `@gist.username`
 const KEY_TOKEN = `@gist.token`
-const KEY_DESC = `@Auto Generated BoxJs Global Backup`
-const KEY_SAVE_KEY = `@backup.json`
+const KEY_DESC = `Auto Generated BoxJs Global Backup`
+const KEY_SAVE_KEY = `backup.json`
 
 $.setdata(new Date().toLocaleString('zh'))
 
