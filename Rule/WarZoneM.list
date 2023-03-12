@@ -1,6 +1,9 @@
 # NAME: WarZone Mobile
 # AUTHOR: Miku404
-DEST-PORT,3074
+IP-CIDR,66.203.0.0/16,no-resolve
+IP-CIDR,25.241.0.0/16,no-resolve
+IP-CIDR,34.92.0.0/16,no-resolve
+IP-CIDR,104.238.0.0/16,no-resolve
 IP-CIDR,95.179.0.0/16,no-resolve
 IP-CIDR,35.213.0.0/16,no-resolve
 DEST-PORT,3074
