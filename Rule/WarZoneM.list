@@ -12,7 +12,6 @@ IP-CIDR,34.162.0.0/16,no-resolve
 IP-CIDR,34.96.0.0/16,no-resolve
 IP-CIDR,34.92.0.0/16,no-resolve
 IP-CIDR,25.241.0.0/16,no-resolve
-DEST-PORT,3074
 DOMAIN-SUFFIX,callofduty.com
 DOMAIN-SUFFIX,cloudfront.net
 DOMAIN-SUFFIX,activision.com
