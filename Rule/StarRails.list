@@ -1,0 +1,8 @@
+# NAME: Star Rails
+# AUTHOR: Miku404
+IP-CIDR,8.209.0.0/16,no-resolve
+IP-CIDR,57.245.0.0/16,no-resolve
+DOMAIN-SUFFIX,hoyoverse.com
+DOMAIN-SUFFIX,starrails.com
+DOMAIN-SUFFIX,mihoyo.com
+# DEST-PORT,23301
