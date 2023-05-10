@@ -6,4 +6,4 @@
 AND,((DOMAIN,iosapps.itunes.apple.com), (SCRIPT,speedLimit)),Apple
 
 [Script]
-speedLimit = type=rule,timeout=60,script-path=https://raw.githubusercontent.com/krisstibex/404Zone/main/Script/Speed%20Limit.js,argument=Group=Apple&policy=Proxy&time=15&minSpeed=15
+speedLimit = type=rule,timeout=60,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/speedLimit.js,argument=Group=Apple&policy=Proxy&time=15&minSpeed=15
