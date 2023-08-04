@@ -19,7 +19,7 @@ IP-CIDR,25.241.0.0/16,no-resolve
 # DOMAIN-SUFFIX,demonware.net
 DOMAIN-SUFFIX,d103o8jcukv8ws.cloudfront.net
 DOMAIN-SUFFIX,telescope.callofduty.com
-DOMAIN-SUFFIX,prod.cdni.callofduty.com
+DOMAIN-SUFFIX,cdni.callofduty.com
 DOMAIN-SUFFIX,prod.demonware.net
 DOMAIN-SUFFIX,infra-ext.activision.com
 DOMAIN-SUFFIX,genesis.stun.eu.demonware.net
