@@ -1,7 +1,5 @@
 # NAME: Call of Duty Mobile
 # AUTHOR: Miku404
-DOMAIN-KEYWORD,activision
-DOMAIN-KEYWORD,codm
-DOMAIN-SUFFIX,activision.com
+AND,((OR,((DEST-PORT,65050), (DEST-PORT,50000), (DEST-PORT,7500))), (PROTOCOL,UDP))
+DOMAIN-SUFFIX,codm.activision.com
 DOMAIN-SUFFIX,codmwest.com
-DEST-PORT,7500
