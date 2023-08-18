@@ -1,8 +1,9 @@
-# 
-
+# NAME: Genshin Impact
+# AUTHOR: Miku404
 #IP-CIDR,8.211.0.0/16,DIRECT,no-resolve
+#以上规则不建议过代理 直连延迟更佳
 DOMAIN-SUFFIX,hoyolab.com
 DOMAIN-SUFFIX,hoyoverse.com
 DOMAIN,dispatchosglobal.yuanshen.com
-DOMAIN,osasiadispatch.yuanshen.comJP
+DOMAIN,osasiadispatch.yuanshen.com
 DOMAIN,overseauspider.yuanshen.com
