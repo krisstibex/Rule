@@ -12,6 +12,9 @@
 # tre xxx (Google 译至英)
 ^https:\/\/duckduckgo.com\/\?q=tre\+([^&]+).+ https://translate.google.com/#view=home&op=translate&sl=auto&tl=en&text=$1 302
 ^https:\/\/duckduckgo.com\/\?q=([^+]+)\+tre.+ https://translate.google.com/#view=home&op=translate&sl=auto&tl=en&text=$1 302
+# trj xxx (Google 译至日)
+^https:\/\/duckduckgo.com\/\?q=trj\+([^&]+).+ https://translate.google.com/#view=home&op=translate&sl=auto&tl=ja&text=$1 302
+^https:\/\/duckduckgo.com\/\?q=([^+]+)\+trj.+ https://translate.google.com/#view=home&op=translate&sl=auto&tl=ja&text=$1 302
 # tt    xxx (头条)
 ^https:\/\/duckduckgo.com\/\?q=tt\+([^&]+).+ https://so.toutiao.com/search?keyword=$1 302
 ^https:\/\/duckduckgo.com\/\?q=([^+]+)\+tt.+ https://so.toutiao.com/search?keyword=$1 302
@@ -27,6 +30,15 @@
 # wx    xxx (微信)
 ^https:\/\/duckduckgo.com\/\?q=wx\+([^&]+).+ https://weixin.sogou.com/weixinwap?query=$1 302
 ^https:\/\/duckduckgo.com\/\?q=([^+]+)\+wx.+ https://weixin.sogou.com/weixinwap?query=$1 302
+# up xxx (Unsplash)
+^https:\/\/duckduckgo.com\/\?q=up\+([^&]+).+ https://unsplash.com/s/photos/$1 302
+^https:\/\/duckduckgo.com\/\?q=([^+]+)\+up.+ https://unsplash.com/s/photos/$1 302
+# sspai xxx (少数派站内搜索)
+^https:\/\/duckduckgo.com\/\?q=sspai\+([^&]+).+ https://sspai.com/search/post/$1 302
+^https:\/\/duckduckgo.com\/\?q=([^+]+)\+sspai.+ https://sspai.com/search/post/$1 302
+# ssp   xxx (Google 搜索少数派)
+^https:\/\/duckduckgo.com\/\?q=ssp\+([^&]+).+ https://www.google.com/search?as_q=$1&as_sitesearch=sspai.com 302
+^https:\/\/duckduckgo.com\/\?q=([^+]+)\+ssp.+ https://www.google.com/search?as_q=$1&as_sitesearch=sspai.com 302
 # tw    xxx (Twitter)
 ^https:\/\/duckduckgo.com\/\?q=tw\+([^&]+).+ https://twitter.com/search?q=$1 302
 ^https:\/\/duckduckgo.com\/\?q=([^+]+)\+tw.+ https://twitter.com/search?q=$1 302
@@ -39,6 +51,15 @@
 # gc    xxx (GitHub Code)
 ^https:\/\/duckduckgo.com\/\?q=gc\+([^&]+).+ https://github.com/search?o=desc&q=$1&s=indexed&type=Code 302
 ^https:\/\/duckduckgo.com\/\?q=([^+]+)\+gc.+ https://github.com/search?o=desc&q=$1&s=indexed&type=Code 302
+# so    xxx (Stack Overflow)
+^https:\/\/duckduckgo.com\/\?q=so\+([^&]+).+ https://stackoverflow.com/search?q=$1 302
+^https:\/\/duckduckgo.com\/\?q=([^+]+)\+so.+ https://stackoverflow.com/search?q=$1 302
+# se    xxx (StackExchange)
+^https:\/\/duckduckgo.com\/\?q=se\+([^&]+).+ https://stackexchange.com/search?q=$1 302
+^https:\/\/duckduckgo.com\/\?q=([^+]+)\+se.+ https://stackexchange.com/search?q=$1 302
+# wa    xxx (WolframAlpha)
+^https:\/\/duckduckgo.com\/\?q=wa\+([^&]+).+ https://www.wolframalpha.com/input/?i=$1 302
+^https:\/\/duckduckgo.com\/\?q=([^+]+)\+wa.+ https://www.wolframalpha.com/input/?i=$1 302
 # rd    xxx (Reddit)
 ^https:\/\/duckduckgo.com\/\?q=rd\+([^&]+).+ https://www.reddit.com/search?q=$1 302
 ^https:\/\/duckduckgo.com\/\?q=([^+]+)\+rd.+ https://www.reddit.com/search?q=$1 302
@@ -46,11 +67,11 @@
 ^https:\/\/duckduckgo.com\/\?q=zdm\+([^&]+).+ https://search.m.smzdm.com/?v=b&s=$1 302
 ^https:\/\/duckduckgo.com\/\?q=([^+]+)\+zdm.+ https://search.m.smzdm.com/?v=b&s=$1 302
 # jd  xxx (京东)
-^https:\/\/duckduckgo.com\/\?q=jd\+([^&]+).+ https://so.m.jd.com/ware/search.action?keyword=$1 302
-^https:\/\/duckduckgo.com\/\?q=([^+]+)\+jd.+ https://so.m.jd.com/ware/search.action?keyword=$1 302
+^https:\/\/duckduckgo.com\/\?q=jd\+([^&]+).+ openapp.jdmobile://virtual?params={"des":"productList","keyWord":"$1","from":"search","category":"jump"} 302
+^https:\/\/duckduckgo.com\/\?q=([^+]+)\+jd.+ openapp.jdmobile://virtual?params={"des":"productList","keyWord":"$1","from":"search","category":"jump"} 302
 # tb  xxx (淘宝)
-^https:\/\/duckduckgo.com\/\?q=tb\+([^&]+).+ https://s.m.taobao.com/h5?q=$1 302
-^https:\/\/duckduckgo.com\/\?q=([^+]+)\+tb.+ https://s.m.taobao.com/h5?q=$1 302
+^https:\/\/duckduckgo.com\/\?q=tb\+([^&]+).+ taobao://s.taobao.com?q=$1 302
+^https:\/\/duckduckgo.com\/\?q=([^+]+)\+tb.+ taobao://s.taobao.com?q=$1 302
 # yt  xxx (YouTube)
 ^https:\/\/duckduckgo.com\/\?q=yt\+([^&]+).+ https://www.youtube.com/results?search_query=$1 302
 ^https:\/\/duckduckgo.com\/\?q=([^+]+)\+yt.+ https://www.youtube.com/results?search_query=$1 302
@@ -60,6 +81,9 @@
 # gd  xxx (Google 搜索 Google Drive 资源)
 ^https:\/\/duckduckgo.com\/\?q=gd\+([^&]+).+ https://www.google.com/search?q=%22Google+Drive%22+$1 302
 ^https:\/\/duckduckgo.com\/\?q=([^+]+)\+gd.+ https://www.google.com/search?q=%22Google+Drive%22+$1 302
+# tgd xxx (t.me/gdurl 搜索 Google Drive 资源)
+^https:\/\/duckduckgo.com\/\?q=tgd\+([^&]+).+ https://t.me/s/gdurl?q=$1 302
+^https:\/\/duckduckgo.com\/\?q=([^+]+)\+tgd.+ https://t.me/s/gdurl?q=$1 302
 # ph  xxx (PornHub)
 ^https:\/\/duckduckgo.com\/\?q=ph\+([^&]+).+ https://cn.pornhub.com/video/search?search=$1 302
 ^https:\/\/duckduckgo.com\/\?q=([^+]+)\+ph.+ https://cn.pornhub.com/video/search?search=$1 302
