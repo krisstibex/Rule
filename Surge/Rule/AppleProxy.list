@@ -9,6 +9,12 @@ DOMAIN,sandbox.itunes.apple.com
 DOMAIN,testflight.apple.com
 DOMAIN,news-edge.apple.com
 DOMAIN,news-events.apple.com
+DOMAIN,mask.icloud.com
+DOMAIN,mask.apple-dns.net
+DOMAIN,mask-canary.icloud.com
+DOMAIN,canary.mask.apple-dns.net
+DOMAIN,mask-h2.icloud.com
+DOMAIN,mask-t.apple-dns.net
 DOMAIN,apple.comscoreresearch.com
 DOMAIN-SUFFIX,apple-dns.net
 DOMAIN-SUFFIX,apps.apple.com
