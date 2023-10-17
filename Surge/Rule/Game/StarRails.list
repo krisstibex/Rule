@@ -1,8 +1,13 @@
 # NAME: Star Rails
 # AUTHOR: Miku404
-IP-CIDR,8.209.0.0/16,no-resolve
-IP-CIDR,57.245.0.0/16,no-resolve
+# IP-CIDR,8.209.0.0/16,no-resolve
+# IP-CIDR,57.245.0.0/16,no-resolve
+DOMAIN,autopatchos.starrails.com
+DOMAIN,globaldp-prod-os01.starrails.com
+DOMAIN,prod-official-asia-dp01.starrails.com
+DOMAIN,prod-official-usa-dp01.starrails.com
+DOMAIN,prod-official-eur-dp01.starrails.com
 DOMAIN-SUFFIX,hoyoverse.com
-DOMAIN-SUFFIX,starrails.com
+# DOMAIN-SUFFIX,starrails.com
 DOMAIN-SUFFIX,mihoyo.com
 # DEST-PORT,23301
