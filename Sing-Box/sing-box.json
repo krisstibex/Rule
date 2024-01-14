@@ -95,57 +95,57 @@
         "tag": "Apple",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo-lite/mixed/apple.srs",
-        "download_detour": "proxy"
+        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo-lite/mixed/Apple_All.srs",
+        "download_detour": "USA"
       },
       {
         "tag": "Apple_Proxy",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo-lite/geosite/bahamut.srs",
-        "download_detour": "proxy"
+        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo-lite/geosite/AppleProxy.srs",
+        "download_detour": "USA"
       },
       {
         "tag": "AD",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo-lite/geosite/bahamut.srs",
-        "download_detour": "proxy"
+        "url": "https://github.com/krisstibex/sing-box-geosite/raw/main/rule/adrules.srs",
+        "download_detour": "USA"
       },
       {
         "tag": "Telegram",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo-lite/geosite/bahamut.srs",
-        "download_detour": "proxy"
+        "url": "https://github.com/krisstibex/sing-box-geosite/raw/main/rule/ASN.srs",
+        "download_detour": "USA"
       },
       {
         "tag": "Spotify",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo-lite/geosite/bahamut.srs",
-        "download_detour": "proxy"
+        "url": "https://github.com/krisstibex/sing-box-geosite/raw/main/rule/Spotify.srs",
+        "download_detour": "USA"
       },
       {
         "tag": "Microsot",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo-lite/geosite/bahamut.srs",
-        "download_detour": "proxy"
+        "url": "https://github.com/krisstibex/sing-box-geosite/raw/main/rule/Microsoft.srs",
+        "download_detour": "USA"
       },
       {
         "tag": "Proxy",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo-lite/geosite/bahamut.srs",
-        "download_detour": "proxy"
+        "url": "https://github.com/krisstibex/sing-box-geosite/raw/main/rule/Proxy_All.srs",
+        "download_detour": "USA"
       },
       {
         "tag": "China",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo-lite/geosite/bahamut.srs",
-        "download_detour": "proxy"
+        "url": "https://github.com/krisstibex/sing-box-geosite/raw/main/rule/ChinaMax_All.srs",
+        "download_detour": "USA"
       }
     ],
     "final": "USA",
