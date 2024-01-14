@@ -116,7 +116,7 @@
         "tag": "Telegram",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/krisstibex/sing-box-geosite/blob/main/rule/Telegram.srs",
+        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo-lite/mixed/telegram.srs",
         "download_detour": "USA"
       },
       {
