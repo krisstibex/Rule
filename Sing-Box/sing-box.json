@@ -70,15 +70,15 @@
         "outbound": "Direct"
       },
       {
-        "rule_set": "Telegram,",
+        "rule_set": "Telegram",
         "outbound": "Singapore"
       },
       {
-        "rule_set": "Microsoft,",
+        "rule_set": "Microsoft",
         "outbound": "Microsoft"
       },
       {
-        "rule_set": "Spotify,",
+        "rule_set": "Spotify",
         "outbound": "Hong Kong"
       },
       {
