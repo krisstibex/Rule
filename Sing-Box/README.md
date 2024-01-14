@@ -10,7 +10,7 @@
 ### 将脚本操作改为 `https://raw.githubusercontent.com/xream/scripts/main/surge/modules/sub-store-scripts/sing-box/template.js#type=组合订阅&name=机场&outbound=🕳ℹ️all|all-auto🕳ℹ️hk|hk-auto🏷ℹ️港|hk|hongkong|kong kong|🇭🇰`
 ### type为“组合订阅”时 会选用组合订阅 单条订阅不需要填写type参数
 ### name为单条订阅或组合订阅的名称 
-### outbound 后的 🕳ℹ️all|all-auto 意为将订阅内的所有节点置于all和all-auto两个策略组中；🕳ℹ️hk|hk-auto🏷ℹ️港|hk|hongkong|kong kong|🇭🇰 意为将被“ℹ️港|hk|hongkong|kong kong|🇭🇰”正则匹配到的节点置于hk和hk-auto策略组中 后面可以用相同格式匹配不同区域的节点
+### outbound 后的 🕳ℹ️all|all-auto 意为将订阅内的所有节点置于all和all-auto两个策略组中；🕳ℹ️hk|hk-auto🏷ℹ️港|hk|hongkong|hong kong|🇭🇰 意为将被“/港|hk|hongkong|kong kong|🇭🇰/i”正则匹配到的节点置于被“/hk|hk-auto/i”正则匹配到的策略组中 后面可以用相同格式匹配不同区域的节点
 ### outbound参数补充：一般以🕳开头 后跟匹配的策略组以及正则；正则前添加ℹ️意为忽略正则中的大小写；筛选策略组的正则与筛选组内节点之间的正则由🏷相连 不筛选节点则不需要添加
 ### 详细说明请参考：https://t.me/cool_scripts/487
 
