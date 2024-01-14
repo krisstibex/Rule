@@ -95,14 +95,14 @@
         "tag": "Apple",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo-lite/mixed/Apple_All.srs",
+        "url": "https://github.com/krisstibex/sing-box-geosite/raw/main/rule/Apple_All.srs",
         "download_detour": "USA"
       },
       {
         "tag": "Apple_Proxy",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo-lite/geosite/AppleProxy.srs",
+        "url": "https://github.com/krisstibex/sing-box-geosite/raw/main/rule/AppleProxy.srs",
         "download_detour": "USA"
       },
       {
