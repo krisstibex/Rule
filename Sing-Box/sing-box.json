@@ -47,11 +47,11 @@
       },
       {
         "ip_is_private": true,
-        "outbound": "direct"
+        "outbound": "Direct"
       },
       {
         "clash_mode": "Direct",
-        "outbound": "direct"
+        "outbound": "Direct"
       },
       {
         "clash_mode": "Global",
@@ -83,7 +83,7 @@
       },
       {
         "rule_set": "China",
-        "outbound": "direct"
+        "outbound": "Direct"
       },
       {
         "rule_set": "Proxy",
