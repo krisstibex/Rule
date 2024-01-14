@@ -62,7 +62,7 @@
         "outbound": "block"
       },
       {
-        "rule_set": "Apple_proxy",
+        "rule_set": "AppleProxy",
         "outbound": "USA"
       },
       {
