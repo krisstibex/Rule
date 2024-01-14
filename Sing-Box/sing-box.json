@@ -127,7 +127,7 @@
         "download_detour": "USA"
       },
       {
-        "tag": "Microsot",
+        "tag": "Microsoft",
         "type": "remote",
         "format": "binary",
         "url": "https://github.com/krisstibex/sing-box-geosite/raw/main/rule/Microsoft.srs",
