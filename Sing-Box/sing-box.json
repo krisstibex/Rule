@@ -144,7 +144,7 @@
         "tag": "China",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/bm7/ChinaMax.json",
+        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/bm7/ChinaMax.srs",
         "download_detour": "USA"
       }
     ],
