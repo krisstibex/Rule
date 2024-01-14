@@ -33,8 +33,8 @@ jobs:
       run: |
         git config --global user.email "action@github.com"
         git config --global user.name "GitHub Action"
-        git add ./Sing-Box/Rule/rule/*.json
-        git add ./Sing-Box/Rule/rule/*.srs
+        git add ./Rule/*.json
+        git add ./Rule/*.srs
 
         # 检查是否有文件被修改
         if git diff --staged --quiet; then
