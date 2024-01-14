@@ -99,7 +99,7 @@
         "download_detour": "USA"
       },
       {
-        "tag": "Apple_Proxy",
+        "tag": "AppleProxy",
         "type": "remote",
         "format": "binary",
         "url": "https://github.com/krisstibex/sing-box-geosite/raw/main/rule/AppleProxy.srs",
