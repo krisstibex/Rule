@@ -1,0 +1,266 @@
+{
+  "dns": {
+    "fakeip": {
+      "enabled": true,
+      "inet4_range": "198.18.0.0/15",
+      "inet6_range": "fc00::/18"
+    },
+    "servers": [
+      {
+        "tag": "google",
+        "address": "https://8.8.8.8/dns-query",
+        "detour": "proxy"
+      },
+      {
+        "tag": "tx",
+        "address": "https://223.5.5.5/dns-query",
+        "detour": "direct"
+      },
+      {
+        "tag": "fakeip",
+        "address": "fakeip"
+      }
+    ],
+    "rules": [
+      {
+        "outbound": "any",
+        "server": "tx",
+        "disable_cache": true
+      },
+      {
+        "clash_mode": "Direct",
+        "server": "tx"
+      },
+      {
+        "clash_mode": "Global",
+        "server": "fakeip"
+      }
+    ],
+    "final": "google",
+    "independent_cache": true
+  },
+  "route": {
+    "rules": [
+      {
+        "port": 53,
+        "outbound": "dns-out"
+      },
+      {
+        "ip_is_private": true,
+        "outbound": "direct"
+      },
+      {
+        "clash_mode": "Direct",
+        "outbound": "direct"
+      },
+      {
+        "clash_mode": "Global",
+        "outbound": "GLOBAL"
+      },
+      {
+        "rule_set": "AD,",
+        "outbound": "block"
+      },
+      {
+        "rule_set": "Apple_proxy",
+        "outbound": "USA"
+      },
+      {
+        "rule_set": "Apple",
+        "outbound": "Direct"
+      },
+      {
+        "rule_set": "Telegram,",
+        "outbound": "Singapore"
+      },
+      {
+        "rule_set": "Microsoft,",
+        "outbound": "Microsoft"
+      },
+      {
+        "rule_set": "Spotify,",
+        "outbound": "Hong Kong"
+      },
+      {
+        "rule_set": "China",
+        "outbound": "direct"
+      },
+      {
+        "rule_set": "Proxy",
+        "outbound": "USA"
+      }
+    ],
+    "rule_set": [
+      {
+        "tag": "Apple",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo-lite/mixed/apple.srs",
+        "download_detour": "proxy"
+      },
+      {
+        "tag": "Apple_Proxy",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo-lite/geosite/bahamut.srs",
+        "download_detour": "proxy"
+      },
+      {
+        "tag": "AD",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo-lite/geosite/bahamut.srs",
+        "download_detour": "proxy"
+      },
+      {
+        "tag": "Telegram",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo-lite/geosite/bahamut.srs",
+        "download_detour": "proxy"
+      },
+      {
+        "tag": "Spotify",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo-lite/geosite/bahamut.srs",
+        "download_detour": "proxy"
+      },
+      {
+        "tag": "Microsot",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo-lite/geosite/bahamut.srs",
+        "download_detour": "proxy"
+      },
+      {
+        "tag": "Proxy",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo-lite/geosite/bahamut.srs",
+        "download_detour": "proxy"
+      },
+      {
+        "tag": "China",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo-lite/geosite/bahamut.srs",
+        "download_detour": "proxy"
+      }
+    ],
+    "final": "USA",
+    "auto_detect_interface": true
+  },
+  "outbounds": [
+    {
+      "tag": "Microsoft",
+      "type": "selector",
+      "outbounds": [
+        "Hong Kong",
+        "Taiwan",
+        "Japan",
+        "Singapore",
+        "USA",
+        "All",
+        "Direct"
+      ],
+      "default": "Direct"
+    },
+    {
+      "tag": "Hong Kong",
+      "type": "selector",
+      "outbounds": []
+    },
+    {
+      "tag": "Taiwan",
+      "type": "selector",
+      "outbounds": []
+    },
+    {
+      "tag": "Singapore",
+      "type": "selector",
+      "outbounds": []
+    },
+    {
+      "tag": "Taiwan",
+      "type": "selector",
+      "outbounds": []
+    },
+    {
+      "tag": "USA",
+      "type": "selector",
+      "outbounds": []
+    },
+    {
+      "tag": "All",
+      "type": "selector",
+      "outbounds": []
+    },
+    {
+      "tag": "GLOBAL",
+      "type": "selector",
+      "outbounds": [
+        "Direct",
+        "Hong Kong",
+        "Taiwan",
+        "Singapore",
+        "Japan",
+        "USA",
+        "All"
+      ],
+      "default": "USA"
+    },
+    {
+      "tag": "Direct",
+      "type": "direct"
+    },
+    {
+      "tag": "block",
+      "type": "block"
+    },
+    {
+      "tag": "dns-out",
+      "type": "dns"
+    }
+  ],
+  "inbounds": [
+    {
+      "type": "tun",
+      "inet4_address": "172.19.0.0/30",
+      "inet6_address": "fdfe:dcba:9876::0/126",
+      "stack": "system",
+      "auto_route": true,
+      "sniff": true,
+      "platform": {
+        "http_proxy": {
+          "enabled": true,
+          "server": "127.0.0.1",
+          "server_port": 7890
+        }
+      }
+    },
+    {
+      "type": "mixed",
+      "listen": "127.0.0.1",
+      "listen_port": 7890,
+      "sniff": true
+    }
+  ],
+  "experimental": {
+    "clash_api": {
+      "external_controller": "127.0.0.1:9090",
+      "external_ui": "ui",
+      "external_ui_download_url": "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip",
+      "external_ui_download_detour": "proxy"
+    },
+    "cache_file": {
+      "enabled": true,
+      "store_fakeip": true
+    }
+  },
+  "log": {
+    "disabled": false,
+    "level": "info",
+    "timestamp": true
+  }
+}
