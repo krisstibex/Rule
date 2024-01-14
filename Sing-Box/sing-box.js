@@ -48,7 +48,7 @@ proxies.filter(p => /^(?!.*(?:us)).*(新|sg|singapore|🇸🇬)/i.test(p.tag)).m
     }
   })
 })
-proxies.filter(p => /美|us|unitedstates|united states|🇺🇸/i.test(p.tag)).map(p => {
+proxies.filter(p => /美|unitedstates|united states|🇺🇸/i.test(p.tag)).map(p => {
   config.outbounds.map(i => {
     if (['USA'].includes(i.tag)) {
       i.outbounds.push(p.tag)
