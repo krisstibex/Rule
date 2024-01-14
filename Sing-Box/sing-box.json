@@ -95,14 +95,14 @@
         "tag": "Apple",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/krisstibex/sing-box-geosite/raw/main/rule/Apple_All.srs",
+        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/bm7/Apple.srs",
         "download_detour": "USA"
       },
       {
         "tag": "AppleProxy",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/krisstibex/sing-box-geosite/raw/main/rule/AppleProxy.srs",
+        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/bm7/AppleProxy.srs",
         "download_detour": "USA"
       },
       {
@@ -123,28 +123,28 @@
         "tag": "Spotify",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/krisstibex/sing-box-geosite/raw/main/rule/Spotify.srs",
+        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/bm7/Spotify.srs",
         "download_detour": "USA"
       },
       {
         "tag": "Microsoft",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/krisstibex/sing-box-geosite/raw/main/rule/Microsoft.srs",
+        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/bm7/Microsoft.srs",
         "download_detour": "USA"
       },
       {
         "tag": "Proxy",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/krisstibex/sing-box-geosite/raw/main/rule/Proxy_All.srs",
+        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/bm7/Proxy.srs",
         "download_detour": "USA"
       },
       {
         "tag": "China",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/krisstibex/sing-box-geosite/raw/main/rule/ChinaMax_All.srs",
+        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/bm7/ChinaMax.json",
         "download_detour": "USA"
       }
     ],
