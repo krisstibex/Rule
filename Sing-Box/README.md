@@ -31,3 +31,4 @@ https://raw.githubusercontent.com/xream/scripts/main/surge/modules/sub-store-scr
 - 本订阅模版修改自 https://github.com/xishang0128/sub-store-template 在此向作者表示感谢
 - Sing-Box相关文档 https://sing-box.sagernet.org 可修改sing-box.json来自定义自己的配置
 - 策略组脚本作者为 https://github.com/xream 再次向作者表示感谢
+- 规则集推荐 https://github.com/MetaCubeX/meta-rules-dat/tree/sing 也可自行编译 https://github.com/Toperlock/sing-box-geosite
