@@ -63,7 +63,7 @@
       },
       {
         "rule_set": "AppleProxy",
-        "outbound": "USA"
+        "outbound": "GLOBAL"
       },
       {
         "rule_set": "Apple",
@@ -87,7 +87,7 @@
       },
       {
         "rule_set": "Proxy",
-        "outbound": "USA"
+        "outbound": "GLOBAL"
       }
     ],
     "rule_set": [
