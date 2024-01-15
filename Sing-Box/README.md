@@ -1,8 +1,8 @@
 # 基于[Sub-Store](https://github.com/sub-store-org/Sub-Store)的[Sing-box](https://github.com/SagerNet/sing-box)配置生成器
 
 ## 简易教程
-确保你已经正确安装Sub-Store
-新添加一个“文件” 然后将下面的链接填入远程文件
+- 确保你已经正确安装Sub-Store
+- 新添加一个“文件” 然后将下面的链接填入远程文件
 ```
 https://raw.githubusercontent.com/xishang0128/sub-store-template/main/sing-box.json
 ```
@@ -10,8 +10,8 @@ https://raw.githubusercontent.com/xishang0128/sub-store-template/main/sing-box.j
 ```
 https://raw.githubusercontent.com/xishang0128/sub-store-template/main/sing-box.js#type=1&name=name
 ```
-type代表订阅格式 填入1为组合订阅 填入其他为单条订阅；name为订阅的“名称” 注意不是“显示名称”
-此时保存即可预览配置 可在稍后同步到gist 方便其他设备使用
+- type代表订阅格式 填入1为组合订阅 填入其他为单条订阅；name为订阅的“名称” 注意不是“显示名称”
+- 此时保存即可预览配置 可在稍后同步到gist 方便其他设备使用
 
 ## 客制化你的策略组
 将脚本操作改为
@@ -28,6 +28,6 @@ https://raw.githubusercontent.com/xream/scripts/main/surge/modules/sub-store-scr
 - 详细说明请参考：https://t.me/cool_scripts/487
 
 ## 其他
-本订阅模版修改自 https://github.com/xishang0128/sub-store-template 在此向作者表示感谢
-Sing-Box相关文档 https://sing-box.sagernet.org 可修改sing-box.json来自定义自己的配置
-策略组脚本作者为 https://github.com/xream 再次向作者表示感谢
+- 本订阅模版修改自 https://github.com/xishang0128/sub-store-template 在此向作者表示感谢
+- Sing-Box相关文档 https://sing-box.sagernet.org 可修改sing-box.json来自定义自己的配置
+- 策略组脚本作者为 https://github.com/xream 再次向作者表示感谢
