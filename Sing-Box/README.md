@@ -6,7 +6,7 @@
 ```
 https://raw.githubusercontent.com/xishang0128/sub-store-template/main/sing-box.json
 ```
-并在脚本操作内加入
+- 并在脚本操作内加入
 ```
 https://raw.githubusercontent.com/xishang0128/sub-store-template/main/sing-box.js#type=1&name=name
 ```
