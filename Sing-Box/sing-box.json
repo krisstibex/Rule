@@ -82,12 +82,12 @@
         "outbound": "Hong Kong"
       },
       {
-        "rule_set": "China",
-        "outbound": "Direct"
-      },
-      {
         "rule_set": "Proxy",
         "outbound": "GLOBAL"
+      },
+      {
+        "rule_set": "China",
+        "outbound": "Direct"
       }
     ],
     "rule_set": [
@@ -167,6 +167,20 @@
       "default": "Direct"
     },
     {
+      "tag": "GLOBAL",
+      "type": "selector",
+      "outbounds": [
+        "Direct",
+        "Hong Kong",
+        "Taiwan",
+        "Singapore",
+        "Japan",
+        "USA",
+        "All"
+      ],
+      "default": "USA"
+    },
+    {
       "tag": "Hong Kong",
       "type": "selector",
       "outbounds": []
@@ -195,20 +209,6 @@
       "tag": "All",
       "type": "selector",
       "outbounds": []
-    },
-    {
-      "tag": "GLOBAL",
-      "type": "selector",
-      "outbounds": [
-        "Direct",
-        "Hong Kong",
-        "Taiwan",
-        "Singapore",
-        "Japan",
-        "USA",
-        "All"
-      ],
-      "default": "USA"
     },
     {
       "tag": "Direct",
