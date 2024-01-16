@@ -16,7 +16,7 @@ https://raw.githubusercontent.com/xishang0128/sub-store-template/main/sing-box.j
 ## 客制化你的策略组
 将脚本操作改为
 ```
-https://raw.githubusercontent.com/xream/scripts/main/surge/modules/sub-store-scripts/sing-box/template.js#type=组合订阅&name=机场&outbound=🕳ℹ️all|all-auto🕳ℹ️hk|hk-auto🏷ℹ️港|hk|hongkong|kong kong|🇭🇰
+https://raw.githubusercontent.com/xream/scripts/main/surge/modules/sub-store-scripts/sing-box/template.js#type=组合订阅&name=机场&outbound=🕳ℹ️all|all-auto🕳ℹ️hk|hk-auto🏷ℹ️港|hk|hongkong|kong kong|🇭🇰](https://raw.githubusercontent.com/xream/scripts/main/surge/modules/sub-store-scripts/sing-box/template.js#name=2bird&outbound=🕳All🕳Hong Kong🏷ℹ️港|hk|hongkong|kong kong|🇭🇰🕳Taiwan🏷ℹ️台|tw|taiwan|🇹🇼🕳Japan🏷ℹ️日本|jp|东京|japan|🇯🇵🕳Singapore🏷ℹ️^(?!.*(?:us)).*(新|sg|singapore|🇸🇬)🕳USA🏷ℹ️美|unitedstates|united states|🇺🇸|洛杉矶)
 ```
 ### 参数详解
 - type为“组合订阅”时 会选用组合订阅 单条订阅不需要填写type参数
