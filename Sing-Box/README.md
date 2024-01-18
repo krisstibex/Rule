@@ -34,6 +34,7 @@ https://sub.sing.alone6713.eu.org/config/url=你的订阅链接&file=https://git
 ```
 - 需要保证订阅内包含港台美日新地区节点各至少一个
 - 如果不放心也可以自己搭建[sing-box-subscribe](https://github.com/Toperlock/sing-box-subscribe)，请配合自己的域名使用 vercel.app 域名不保证联通性
+- 更多使用方法请参考官方文档
 
 ## 其他
 - 本订阅模版修改自 https://github.com/xishang0128/sub-store-template 在此向作者表示感谢
