@@ -1,0 +1,407 @@
+{
+  "dns": {
+    "fakeip": {
+      "enabled": true,
+      "inet4_range": "198.18.0.0/15",
+      "inet6_range": "fc00::/18"
+    },
+    "servers": [
+      {
+        "tag": "google",
+        "address": "https://8.8.8.8/dns-query",
+        "detour": "Hong Kong"
+      },
+      {
+        "tag": "cn",
+        "address": "https://223.5.5.5/dns-query",
+        "detour": "Direct"
+      },
+      {
+        "tag": "fakeip",
+        "address": "fakeip"
+      }
+    ],
+    "rules": [
+      {
+        "outbound": "any",
+        "server": "cn",
+        "disable_cache": true
+      },
+      {
+        "clash_mode": "Direct",
+        "server": "cn"
+      },
+      {
+        "clash_mode": "Global",
+        "server": "fakeip"
+      }
+    ],
+    "final": "google",
+    "independent_cache": true
+  },
+  "route": {
+    "rules": [
+      {
+        "port": 53,
+        "outbound": "dns-out"
+      },
+      {
+        "ip_is_private": true,
+        "outbound": "Direct"
+      },
+      {
+        "clash_mode": "Direct",
+        "outbound": "Direct"
+      },
+      {
+        "clash_mode": "Global",
+        "outbound": "GLOBAL"
+      },
+      {
+        "rule_set": "AD",
+        "outbound": "block"
+      },
+      {
+        "rule_set": "AppleProxy",
+        "outbound": "GLOBAL"
+      },
+      {
+        "rule_set": "Apple",
+        "outbound": "Direct"
+      },
+      {
+        "rule_set": "Microsoft",
+        "outbound": "Microsoft"
+      },
+      {
+        "rule_set": "Telegram",
+        "outbound": "Telegram"
+      },
+      {
+        "rule_set": "Netflix",
+        "outbound": "Netflix"
+      },
+      {
+        "rule_set": "Disney+",
+        "outbound": "Disney+"
+      },
+      {
+        "rule_set": "Youtube",
+        "outbound": "Youtube"
+      },
+      {
+        "rule_set": "Spotify",
+        "outbound": "Spotify"
+      },
+      {
+        "rule_set": "BiliBili",
+        "outbound": "BiliBili"
+      },
+      {
+        "rule_set": "Proxy",
+        "outbound": "GLOBAL"
+      },
+      {
+        "rule_set": "China",
+        "outbound": "Direct"
+      }
+    ],
+    "rule_set": [
+      {
+        "tag": "AD",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/krisstibex/sing-box-geosite/raw/main/rule/adrules.srs",
+        "download_detour": "Hong Kong"
+      },
+      {
+        "tag": "AppleProxy",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/bm7/AppleProxy.srs",
+        "download_detour": "Hong Kong"
+      },
+      {
+        "tag": "Apple",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/bm7/Apple.srs",
+        "download_detour": "Hong Kong"
+      },
+      {
+        "tag": "Microsoft",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/bm7/Microsoft.srs",
+        "download_detour": "Hong Kong"
+      },
+      {
+        "tag": "Telegram",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo-lite/mixed/telegram.srs",
+        "download_detour": "Hong Kong"
+      },
+      {
+        "tag": "Netflix",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/bm7/Netflix.srs",
+        "download_detour": "Hong Kong"
+      },
+      {
+        "tag": "Disney+",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/bm7/Disney.srs",
+        "download_detour": "Hong Kong"
+      },
+      {
+        "tag": "Youtube",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/bm7/Google.srs",
+        "download_detour": "Hong Kong"
+      },
+      {
+        "tag": "Spotify",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/bm7/Spotify.srs",
+        "download_detour": "Hong Kong"
+      },
+      {
+        "tag": "BiliBili",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/bm7/BiliBili.srs",
+        "download_detour": "Hong Kong"
+      },
+      {
+        "tag": "Proxy",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/bm7/Proxy.srs",
+        "download_detour": "Hong Kong"
+      },
+      {
+        "tag": "China",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/bm7/ChinaMax.srs",
+        "download_detour": "Hong Kong"
+      }
+    ],
+    "final": "GLOBAL",
+    "auto_detect_interface": true
+  },
+  "outbounds": [
+    {
+      "tag": "Microsoft",
+      "type": "selector",
+      "outbounds": [
+        "Hong Kong",
+        "Taiwan",
+        "Japan",
+        "Singapore",
+        "USA",
+        "All",
+        "Direct"
+      ],
+      "default": "Direct"
+    },
+    {
+      "tag": "Telegram",
+      "type": "selector",
+      "outbounds": [
+        "Direct",
+        "Hong Kong",
+        "Taiwan",
+        "Singapore",
+        "Japan",
+        "USA",
+        "All"
+      ],
+      "default": "Singapore"
+    },
+    {
+      "tag": "Netflix",
+      "type": "selector",
+      "outbounds": [
+        "Direct",
+        "Hong Kong",
+        "Taiwan",
+        "Singapore",
+        "Japan",
+        "USA",
+        "All"
+      ],
+      "default": "Singapore"
+    },
+    {
+      "tag": "Disney+",
+      "type": "selector",
+      "outbounds": [
+        "Direct",
+        "Hong Kong",
+        "Taiwan",
+        "Singapore",
+        "Japan",
+        "USA",
+        "All"
+      ],
+      "default": "USA"
+    },
+    {
+      "tag": "Youtube",
+      "type": "selector",
+      "outbounds": [
+        "Direct",
+        "Hong Kong",
+        "Taiwan",
+        "Singapore",
+        "Japan",
+        "USA",
+        "All"
+      ],
+      "default": "USA"
+    },
+    {
+      "tag": "Spotify",
+      "type": "selector",
+      "outbounds": [
+        "Direct",
+        "Hong Kong",
+        "Taiwan",
+        "Singapore",
+        "Japan",
+        "USA",
+        "All"
+      ],
+      "default": "Direct"
+    },
+    {
+      "tag": "BiliBili",
+      "type": "selector",
+      "outbounds": [
+        "Direct",
+        "Hong Kong",
+        "Taiwan"
+      ],
+      "default": "Direct"
+    },
+    {
+      "tag": "GLOBAL",
+      "type": "selector",
+      "outbounds": [
+        "Direct",
+        "Hong Kong",
+        "Taiwan",
+        "Singapore",
+        "Japan",
+        "USA",
+        "All"
+      ],
+      "default": "USA"
+    },
+    {
+      "tag": "Hong Kong",
+      "type": "selector",
+      "outbounds": [{all}],
+      "filter":[
+        {"action":"include","keywords":["🇭🇰|HK|hk|香港|港|HongKong"]}
+      ]
+    },
+    {
+      "tag": "Taiwan",
+      "type": "selector",
+      "outbounds": [{all}],
+      "filter":[
+        {"action":"include","keywords":["🇹🇼|TW|tw|台湾|臺灣|台|Taiwan"]}
+      ]
+    },
+    {
+      "tag": "Singapore",
+      "type": "selector",
+      "outbounds": [{all}],
+      "filter":[
+        {"action":"include","keywords":["🇸🇬|SG|sg|新加坡|狮|Singapore"]}
+      ]
+    },
+    {
+      "tag": "Japan",
+      "type": "selector",
+      "outbounds": [{all}],
+      "filter":[
+        {"action":"include","keywords":["🇯🇵|JP|jp|日本|日|Japan"]}
+      ]
+    },
+    {
+      "tag": "USA",
+      "type": "selector",
+      "outbounds": [{all}],
+      "filter":[
+        {"action":"include","keywords":["🇺🇸|US|美国|美|United States"]}
+      ]
+    },
+    {
+      "tag": "All",
+      "type": "selector",
+      "outbounds": [{all}],
+      "filter":[
+        {"action":"exclude","keywords":["网站|地址|剩余|流量|过期|时间|有效"]}
+    },
+    {
+      "tag": "Direct",
+      "type": "direct"
+    },
+    {
+      "tag": "block",
+      "type": "block"
+    },
+    {
+      "tag": "dns-out",
+      "type": "dns"
+    }
+  ],
+  "inbounds": [
+    {
+      "type": "tun",
+      "inet4_address": "172.19.0.0/30",
+      "inet6_address": "fdfe:dcba:9876::0/126",
+      "stack": "system",
+      "auto_route": true,
+      "sniff": true,
+      "platform": {
+        "http_proxy": {
+          "enabled": true,
+          "server": "127.0.0.1",
+          "server_port": 7890
+        }
+      }
+    },
+    {
+      "type": "mixed",
+      "listen": "127.0.0.1",
+      "listen_port": 7890,
+      "sniff": true
+    }
+  ],
+  "experimental": {
+    "clash_api": {
+      "external_controller": "127.0.0.1:9090",
+      "external_ui": "ui",
+      "external_ui_download_url": "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip",
+      "external_ui_download_detour": "Hong Kong"
+    },
+    "cache_file": {
+      "enabled": true,
+      "store_fakeip": true
+    }
+  },
+  "log": {
+    "disabled": false,
+    "level": "info",
+    "timestamp": true
+  }
+}
