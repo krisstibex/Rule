@@ -70,6 +70,10 @@
         "outbound": "Direct"
       },
       {
+        "rule_set": "Github",
+        "outbound": "Github"
+      },
+      {
         "rule_set": "Microsoft",
         "outbound": "Microsoft"
       },
@@ -112,84 +116,91 @@
         "type": "remote",
         "format": "binary",
         "url": "https://github.com/krisstibex/sing-box-geosite/raw/main/rule/adrules.srs",
-        "download_detour": "Hong Kong"
+        "download_detour": "Github"
       },
       {
         "tag": "AppleProxy",
         "type": "remote",
         "format": "binary",
         "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/bm7/AppleProxy.srs",
-        "download_detour": "Hong Kong"
+        "download_detour": "Github"
       },
       {
         "tag": "Apple",
         "type": "remote",
         "format": "binary",
         "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/bm7/Apple.srs",
-        "download_detour": "Hong Kong"
+        "download_detour": "Github"
+      },
+      {
+        "tag": "Github",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/bm7/GitHub.srs",
+        "download_detour": "Github"
       },
       {
         "tag": "Microsoft",
         "type": "remote",
         "format": "binary",
         "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/bm7/Microsoft.srs",
-        "download_detour": "Hong Kong"
+        "download_detour": "Github"
       },
       {
         "tag": "Telegram",
         "type": "remote",
         "format": "binary",
         "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo-lite/mixed/telegram.srs",
-        "download_detour": "Hong Kong"
+        "download_detour": "Github"
       },
       {
         "tag": "Netflix",
         "type": "remote",
         "format": "binary",
         "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/bm7/Netflix.srs",
-        "download_detour": "Hong Kong"
+        "download_detour": "Github"
       },
       {
         "tag": "Disney+",
         "type": "remote",
         "format": "binary",
         "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/bm7/Disney.srs",
-        "download_detour": "Hong Kong"
+        "download_detour": "Github"
       },
       {
         "tag": "Youtube",
         "type": "remote",
         "format": "binary",
         "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/bm7/Google.srs",
-        "download_detour": "Hong Kong"
+        "download_detour": "Github"
       },
       {
         "tag": "Spotify",
         "type": "remote",
         "format": "binary",
         "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/bm7/Spotify.srs",
-        "download_detour": "Hong Kong"
+        "download_detour": "Github"
       },
       {
         "tag": "BiliBili",
         "type": "remote",
         "format": "binary",
         "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/bm7/BiliBili.srs",
-        "download_detour": "Hong Kong"
+        "download_detour": "Github"
       },
       {
         "tag": "Proxy",
         "type": "remote",
         "format": "binary",
         "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/bm7/Proxy.srs",
-        "download_detour": "Hong Kong"
+        "download_detour": "Github"
       },
       {
         "tag": "China",
         "type": "remote",
         "format": "binary",
         "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/bm7/ChinaMax.srs",
-        "download_detour": "Hong Kong"
+        "download_detour": "Github"
       }
     ],
     "final": "GLOBAL",
@@ -209,6 +220,20 @@
         "Direct"
       ],
       "default": "Direct"
+    },
+    {
+      "tag": "Github",
+      "type": "selector",
+      "outbounds": [
+        "Hong Kong",
+        "Taiwan",
+        "Japan",
+        "Singapore",
+        "USA",
+        "All",
+        "Direct"
+      ],
+      "default": "USA"
     },
     {
       "tag": "Telegram",
@@ -375,7 +400,7 @@
       "external_controller": "127.0.0.1:9090",
       "external_ui": "ui",
       "external_ui_download_url": "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip",
-      "external_ui_download_detour": "Hong Kong"
+      "external_ui_download_detour": "Github"
     },
     "cache_file": {
       "enabled": true,
