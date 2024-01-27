@@ -94,6 +94,10 @@
         "outbound": "Youtube"
       },
       {
+        "rule_set": "Google",
+        "outbound": "Youtube"
+      },
+      {
         "rule_set": "Spotify",
         "outbound": "Spotify"
       },
@@ -122,28 +126,28 @@
         "tag": "AppleProxy",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/bm7/AppleProxy.srs",
+        "url": "https://github.com/krisstibex/sing-box-geosite/raw/main/rule/AppleProxy.srs",
         "download_detour": "Github"
       },
       {
         "tag": "Apple",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/bm7/Apple.srs",
+        "url": "https://github.com/krisstibex/sing-box-geosite/raw/main/rule/Apple_Classical.srs",
         "download_detour": "Github"
       },
       {
         "tag": "Github",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/bm7/GitHub.srs",
+        "url": "https://github.com/krisstibex/sing-box-geosite/raw/main/rule/GitHub.srs",
         "download_detour": "Github"
       },
       {
         "tag": "Microsoft",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/bm7/Microsoft.srs",
+        "url": "https://github.com/krisstibex/sing-box-geosite/raw/main/rule/Microsoft.srs",
         "download_detour": "Github"
       },
       {
@@ -157,49 +161,56 @@
         "tag": "Netflix",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/bm7/Netflix.srs",
+        "url": "https://github.com/krisstibex/sing-box-geosite/raw/main/rule/Netflix_Classical.srs",
         "download_detour": "Github"
       },
       {
         "tag": "Disney+",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/bm7/Disney.srs",
+        "url": "https://github.com/krisstibex/sing-box-geosite/raw/main/rule/Disney.srs",
         "download_detour": "Github"
       },
       {
         "tag": "Youtube",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/bm7/Google.srs",
+        "url": "https://github.com/krisstibex/sing-box-geosite/raw/main/rule/YouTube.srs",
+        "download_detour": "Github"
+      },
+      {
+        "tag": "Google",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/krisstibex/sing-box-geosite/raw/main/rule/Google.srs",
         "download_detour": "Github"
       },
       {
         "tag": "Spotify",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/bm7/Spotify.srs",
+        "url": "https://github.com/krisstibex/sing-box-geosite/raw/main/rule/Spotify.srs",
         "download_detour": "Github"
       },
       {
         "tag": "BiliBili",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/bm7/BiliBili.srs",
+        "url": "https://github.com/krisstibex/sing-box-geosite/raw/main/rule/BiliBili.srs",
         "download_detour": "Github"
       },
       {
         "tag": "Proxy",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/bm7/Proxy.srs",
+        "url": "https://github.com/krisstibex/sing-box-geosite/raw/main/rule/Proxy_Classical.srs",
         "download_detour": "Github"
       },
       {
         "tag": "China",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/bm7/ChinaMax.srs",
+        "url": "https://github.com/krisstibex/sing-box-geosite/raw/main/rule/ChinaMax_Classical.srs",
         "download_detour": "Github"
       }
     ],
