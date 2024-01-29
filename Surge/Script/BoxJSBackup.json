@@ -1,0 +1,87 @@
+{
+  "id": "xream.app.sub",
+  "name": "Gist 备份",
+  "author": "@xream",
+  "icon": "https://raw.githubusercontent.com/xream/scripts/main/surge/modules/gist/asset/icon.png",
+  "repo": "https://github.com/xream/scripts/tree/main",
+  "apps": [
+    {
+      "id": "xream.gist",
+      "name": "Gist 备份",
+      "descs_html": [
+        "原脚本由 <a href='https://github.com/dompling' target='_blank'>@dompling</a> 提供, 感谢!",
+        "本脚本涉及大量对 BoxJs 以及原脚本的复制粘贴 侵删",
+        "<br />",
+        "<b>Token</b> 获取方式:",
+        "<span style='margin-left: 40px'>头像菜单 -></span>",
+        "<span style='margin-left: 40px'>Settings -></span>",
+        "<span style='margin-left: 40px'>Developer settings -></span>",
+        "<span style='margin-left: 40px'>Personal access tokens -></span>",
+        "<span style='margin-left: 40px'>Generate new token -></span>",
+        "<span style='margin-left: 40px'>在里面找到 gist 勾选提交</span>",
+        "<a href=\"https://github.com/xream/scripts/tree/main/surge/modules/gist\">查看文档</a>",
+        "<a href=\"https://github.com/settings/tokens\">GitHub Personal access tokens 页面</a>",
+        "<a onClick=\"window.location.reload(true);\">刷新</a>"
+      ],
+      "keys": [
+        "@xream.gist.username",
+        "@xream.gist.token",
+        "@xream.gist.desc",
+        "@xream.gist.saveKey"
+      ],
+      "author": "@xream",
+      "repo": "https://github.com/xream/scripts/tree/main/surge/modules/gist",
+      "scripts": [
+        {
+          "name": "备份",
+          "script": "https://raw.githubusercontent.com/xream/scripts/main/surge/modules/gist/backup.js"
+        },
+        {
+          "name": "恢复(谨慎操作)",
+          "script": "https://raw.githubusercontent.com/xream/scripts/main/surge/modules/gist/restore.js"
+        },
+        {
+          "name": "删除(谨慎操作)",
+          "script": "https://raw.githubusercontent.com/xream/scripts/main/surge/modules/gist/delete.js"
+        }
+      ],
+      "settings": [
+        {
+          "id": "@xream.gist.username",
+          "name": "用户名",
+          "val": "",
+          "type": "text",
+          "desc": "你的个人页面是 https://github.com/xream 那么 xream 就是你的用户名"
+        },
+        {
+          "id": "@xream.gist.token",
+          "name": "Personal access token",
+          "placeholder": "",
+          "val": "",
+          "type": "text",
+          "desc": "获取方式见👆🏻"
+        },
+        {
+          "id": "@xream.gist.desc",
+          "name": "Gist 描述",
+          "placeholder": "",
+          "val": "Auto Generated BoxJs Global Backup",
+          "type": "text",
+          "desc": "默认为 Auto Generated BoxJs Global Backup"
+        },
+        {
+          "id": "@xream.gist.saveKey",
+          "name": "Gist 文件名",
+          "placeholder": "",
+          "val": "backup.json",
+          "type": "text",
+          "desc": "默认为 backup.json"
+        }
+      ],
+      "icons": [
+        "https://raw.githubusercontent.com/xream/scripts/main/surge/modules/gist/asset/icon.png",
+        "https://raw.githubusercontent.com/xream/scripts/main/surge/modules/gist/asset/icon.png"
+      ]
+    }
+  ]
+} 
