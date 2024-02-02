@@ -119,98 +119,98 @@
         "tag": "AD",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/krisstibex/Sing-Rule/raw/main/rule/adrules.srs",
+        "url": "https://github.com/krisstibex/Sing-Rule/releases/latest/download/adrules.srs",
         "download_detour": "Github"
       },
       {
         "tag": "AppleProxy",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/krisstibex/Sing-Rule/raw/main/rule/AppleProxy.srs",
+        "url": "https://github.com/krisstibex/Sing-Rule/releases/latest/download/AppleProxy.srs",
         "download_detour": "Github"
       },
       {
         "tag": "Apple",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/krisstibex/Sing-Rule/raw/main/rule/Apple_Classical.srs",
+        "url": "https://github.com/krisstibex/Sing-Rule/releases/latest/download/Apple_Classical.srs",
         "download_detour": "Github"
       },
       {
         "tag": "Github",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/krisstibex/Sing-Rule/raw/main/rule/GitHub.srs",
+        "url": "https://github.com/krisstibex/Sing-Rule/releases/latest/download/GitHub.srs",
         "download_detour": "Github"
       },
       {
         "tag": "Microsoft",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/krisstibex/Sing-Rule/raw/main/rule/Microsoft.srs",
+        "url": "https://github.com/krisstibex/Sing-Rule/releases/latest/download/Microsoft.srs",
         "download_detour": "Github"
       },
       {
         "tag": "Telegram",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/krisstibex/Sing-Rule/raw/sing/geo-lite/mixed/telegram.srs",
+        "url": "https://github.com/krisstibex/Sing-Rule/releases/latest/download/telegram.srs",
         "download_detour": "Github"
       },
       {
         "tag": "Netflix",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/krisstibex/Sing-Rule/raw/main/rule/Netflix_Classical.srs",
+        "url": "https://github.com/krisstibex/Sing-Rule/releases/latest/download/Netflix_Classical.srs",
         "download_detour": "Github"
       },
       {
         "tag": "Disney+",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/krisstibex/Sing-Rule/raw/main/rule/Disney.srs",
+        "url": "https://github.com/krisstibex/Sing-Rule/releases/latest/download/Disney.srs",
         "download_detour": "Github"
       },
       {
         "tag": "Youtube",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/krisstibex/Sing-Rule/raw/main/rule/YouTube.srs",
+        "url": "https://github.com/krisstibex/Sing-Rule/releases/latest/download/YouTube.srs",
         "download_detour": "Github"
       },
       {
         "tag": "Google",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/krisstibex/Sing-Rule/raw/main/rule/Google.srs",
+        "url": "https://github.com/krisstibex/Sing-Rule/releases/latest/download/Google.srs",
         "download_detour": "Github"
       },
       {
         "tag": "Spotify",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/krisstibex/Sing-Rule/raw/main/rule/Spotify.srs",
+        "url": "https://github.com/krisstibex/Sing-Rule/releases/latest/download/Spotify.srs",
         "download_detour": "Github"
       },
       {
         "tag": "BiliBili",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/krisstibex/Sing-Rule/raw/main/rule/BiliBili.srs",
+        "url": "https://github.com/krisstibex/Sing-Rule/releases/latest/download/BiliBili.srs",
         "download_detour": "Github"
       },
       {
         "tag": "Proxy",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/krisstibex/Sing-Rule/raw/main/rule/Proxy_Classical.srs",
+        "url": "https://github.com/krisstibex/Sing-Rule/releases/latest/download/Proxy_Classical.srs",
         "download_detour": "Github"
       },
       {
         "tag": "China",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/krisstibex/Sing-Rule/raw/main/rule/ChinaMax_Classical.srs",
+        "url": "https://github.com/krisstibex/Sing-Rule/releases/latest/download/ChinaMax_Classical.srs",
         "download_detour": "Github"
       }
     ],
