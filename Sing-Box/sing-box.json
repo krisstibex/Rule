@@ -9,7 +9,7 @@
       {
         "tag": "google",
         "address": "https://8.8.8.8/dns-query",
-        "detour": "Hong Kong"
+        "detour": "HongKong"
       },
       {
         "tag": "cn",
@@ -222,7 +222,7 @@
       "tag": "Microsoft",
       "type": "selector",
       "outbounds": [
-        "Hong Kong",
+        "HongKong",
         "Taiwan",
         "Japan",
         "Singapore",
@@ -236,7 +236,7 @@
       "tag": "Github",
       "type": "selector",
       "outbounds": [
-        "Hong Kong",
+        "HongKong",
         "Taiwan",
         "Japan",
         "Singapore",
@@ -244,14 +244,14 @@
         "All",
         "Direct"
       ],
-      "default": "Hong Kong"
+      "default": "HongKong"
     },
     {
       "tag": "Telegram",
       "type": "selector",
       "outbounds": [
         "Direct",
-        "Hong Kong",
+        "HongKong",
         "Taiwan",
         "Singapore",
         "Japan",
@@ -265,7 +265,7 @@
       "type": "selector",
       "outbounds": [
         "Direct",
-        "Hong Kong",
+        "HongKong",
         "Taiwan",
         "Singapore",
         "Japan",
@@ -279,7 +279,7 @@
       "type": "selector",
       "outbounds": [
         "Direct",
-        "Hong Kong",
+        "HongKong",
         "Taiwan",
         "Singapore",
         "Japan",
@@ -293,7 +293,7 @@
       "type": "selector",
       "outbounds": [
         "Direct",
-        "Hong Kong",
+        "HongKong",
         "Taiwan",
         "Singapore",
         "Japan",
@@ -307,7 +307,7 @@
       "type": "selector",
       "outbounds": [
         "Direct",
-        "Hong Kong",
+        "HongKong",
         "Taiwan",
         "Singapore",
         "Japan",
@@ -321,7 +321,7 @@
       "type": "selector",
       "outbounds": [
         "Direct",
-        "Hong Kong",
+        "HongKong",
         "Taiwan"
       ],
       "default": "Direct"
@@ -331,7 +331,7 @@
       "type": "selector",
       "outbounds": [
         "Direct",
-        "Hong Kong",
+        "HongKong",
         "Taiwan",
         "Singapore",
         "Japan",
@@ -341,7 +341,7 @@
       "default": "USA"
     },
     {
-      "tag": "Hong Kong",
+      "tag": "HongKong",
       "type": "selector",
       "outbounds": []
     },
