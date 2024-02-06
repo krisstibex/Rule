@@ -34,6 +34,18 @@
       {
         "clash_mode": "Global",
         "server": "fakeip"
+      },
+      {
+        "query_type": [
+          "A",
+          "AAAA"
+        ],
+        "server": "fakeip",
+        "rewrite_ttl": 1
+      },
+      {
+        "rule_set": "China",
+        "server": "cn"
       }
     ],
     "final": "google",
