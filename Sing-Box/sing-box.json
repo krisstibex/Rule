@@ -118,10 +118,6 @@
         "outbound": "BiliBili"
       },
       {
-        "rule_set": "DownloadCDN",
-        "outbound": "DownloadCDN"
-      },
-      {
         "rule_set": "Proxy",
         "outbound": "Proxy"
       },
