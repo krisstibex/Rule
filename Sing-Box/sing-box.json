@@ -75,7 +75,7 @@
       },
       {
         "rule_set": "AppleProxy",
-        "outbound": "GLOBAL"
+        "outbound": "Proxy"
       },
       {
         "rule_set": "Apple",
@@ -118,8 +118,12 @@
         "outbound": "BiliBili"
       },
       {
+        "rule_set": "DownloadCDN",
+        "outbound": "DownloadCDN"
+      },
+      {
         "rule_set": "Proxy",
-        "outbound": "GLOBAL"
+        "outbound": "Proxy"
       },
       {
         "rule_set": "China",
@@ -226,7 +230,7 @@
         "download_detour": "Github"
       }
     ],
-    "final": "GLOBAL",
+    "final": "Final",
     "auto_detect_interface": true
   },
   "outbounds": [
@@ -339,6 +343,20 @@
       "default": "Direct"
     },
     {
+      "tag": "Proxy",
+      "type": "selector",
+      "outbounds": [
+        "Direct",
+        "HongKong",
+        "Taiwan",
+        "Singapore",
+        "Japan",
+        "USA",
+        "All"
+      ],
+      "default": "USA"
+    },
+    {
       "tag": "GLOBAL",
       "type": "selector",
       "outbounds": [
@@ -351,6 +369,15 @@
         "All"
       ],
       "default": "USA"
+    },
+    {
+      "tag": "Final",
+      "type": "selector",
+      "outbounds": [
+        "Direct",
+        "Proxy"
+      ],
+      "default": "Proxy"
     },
     {
       "tag": "HongKong",
