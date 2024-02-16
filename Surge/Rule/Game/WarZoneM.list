@@ -1,8 +1,11 @@
 # NAME: WarZone Mobile
 # AUTHOR: Miku404
+
+IP-CIDR,10.148.0.0/16,no-resolve
 IP-CIDR,34.87.0.0/16,no-resolve
 IP-CIDR,34.142.0.0/16,no-resolve
 IP-CIDR,34.143.0.0/16,no-resolve
+IP-CIDR,35.198.0.0/16,no-resolve
 IP-CIDR,35.207.0.0/16,no-resolve
 IP-CIDR,35.217.0.0/16,no-resolve
 IP-CIDR,64.176.0.0/16,no-resolve
@@ -13,6 +16,7 @@ DOMAIN,www.callofduty.com
 DOMAIN,dev.cdni.callofduty.com
 DOMAIN,prod.cdni.callofduty.com
 DOMAIN,wzm-gvs.prod.demonware.net
+DOMAIN,genesis.stun.eu.demonware.net
 DOMAIN,genesis.stun.us.demonware.net
 DOMAIN,timberwolf-lobby.prod.demonware.net
 DOMAIN,prod-data-energon.infra-ext.activision.com
