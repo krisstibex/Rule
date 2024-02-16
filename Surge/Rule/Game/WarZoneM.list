@@ -1,27 +1,22 @@
 # NAME: WarZone Mobile
 # AUTHOR: Miku404
-IP-CIDR,149.248.0.0/16,no-resolve
-IP-CIDR,104.238.0.0/16,no-resolve
-IP-CIDR,95.179.0.0/16,no-resolve
-IP-CIDR,66.203.0.0/16,no-resolve
-IP-CIDR,66.42.0.0/16,no-resolve
-IP-CIDR,64.176.0.0/16,no-resolve
-IP-CIDR,35.241.0.0/16,no-resolve
+IP-CIDR,34.87.0.0/16,no-resolve
+IP-CIDR,34.142.0.0/16,no-resolve
+IP-CIDR,34.143.0.0/16,no-resolve
+IP-CIDR,35.207.0.0/16,no-resolve
 IP-CIDR,35.217.0.0/16,no-resolve
-IP-CIDR,35.216.0.0/16,no-resolve
-IP-CIDR,35.213.0.0/16,no-resolve
-IP-CIDR,34.162.0.0/16,no-resolve
-IP-CIDR,34.96.0.0/16,no-resolve
-IP-CIDR,34.92.0.0/16,no-resolve
-IP-CIDR,25.241.0.0/16,no-resolve
-# DOMAIN-SUFFIX,callofduty.com
-# DOMAIN-SUFFIX,activision.com
-# DOMAIN-SUFFIX,demonware.net
-DOMAIN-SUFFIX,d103o8jcukv8ws.cloudfront.net
-DOMAIN-SUFFIX,cod-assets.cdn.callofduty.com
+IP-CIDR,64.176.0.0/16,no-resolve
+IP-CIDR,139.180.0.0/16,no-resolve
+IP-CIDR,149.28.0.0/16,no-resolve
 DOMAIN-SUFFIX,telescope.callofduty.com
-DOMAIN-SUFFIX,cdni.callofduty.com
-DOMAIN-SUFFIX,prod.demonware.net
-DOMAIN-SUFFIX,infra-ext.activision.com
-DOMAIN-SUFFIX,genesis.stun.eu.demonware.net
-DOMAIN-SUFFIX,genesis.stun.us.demonware.net
+DOMAIN,www.callofduty.com
+DOMAIN,dev.cdni.callofduty.com
+DOMAIN,prod.cdni.callofduty.com
+DOMAIN,wzm-gvs.prod.demonware.net
+DOMAIN,genesis.stun.us.demonware.net
+DOMAIN,timberwolf-lobby.prod.demonware.net
+DOMAIN,prod-data-energon.infra-ext.activision.com
+DOMAIN,d103o8jcukv8ws.cloudfront.net
+
+# wzm-ios-loginservice.prod.demonware.net 
+# 此域名为WZM发布地区验证 仅代理本域名即可直连游玩WZM
