@@ -3,6 +3,7 @@
 
 IP-CIDR,10.148.0.0/16,no-resolve
 IP-CIDR,34.87.0.0/16,no-resolve
+IP-CIDR,34.126.0.0/16,no-resolve
 IP-CIDR,34.142.0.0/16,no-resolve
 IP-CIDR,34.143.0.0/16,no-resolve
 IP-CIDR,35.198.0.0/16,no-resolve
