@@ -22,6 +22,7 @@ DOMAIN,genesis.stun.us.demonware.net
 DOMAIN,timberwolf-lobby.prod.demonware.net
 DOMAIN,prod-data-energon.infra-ext.activision.com
 DOMAIN,d103o8jcukv8ws.cloudfront.net
+AND,((DOMAIN-SUFFIX,appsflyersdk.com), (DOMAIN-KEYWORD,evt75q))
 
 # wzm-ios-loginservice.prod.demonware.net 
 # 此域名为WZM发布地区验证 仅代理本域名即可直连游玩WZM
