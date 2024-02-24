@@ -3,11 +3,10 @@
 #!category=📺 BiliUniverse
 
 [Script]
-B站每日等级任务 = type=cron,cronexp=30 7 * * *,script-path=https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/BiliBili.js
+BiliBili.LoginX = type=cron,cronexp=30 7 * * *,script-path=https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js,wake-system=1,timeout=15
 
-#以下cookie获取方式二选其一即可
-#B站获取Cookie(APP) = type=http-request,pattern=^https:\/\/app\.bilibili\.com\/x\/resource\/domain\?,script-path=https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/BiliBili.js
-#B站获取Cookie(网页) = type=http-request,pattern=^https:\/\/m.bilibili.com/$,script-path=https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/BiliBili.js
+BiliBili.LoginX.app = type=http-request,pattern=^https?:\/\/app\.bilibili\.com\/x\/resource\/fingerprint\?,script-path=https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js,requires-body=0
+BiliBili.LoginX.website = type=http-request,pattern=^https?:\/\/m\.bilibili\.com/$,script-path=https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js,requires-body=0
 
 [MITM]
-hostname= %APPEND% app.bilibili.com, m.bilibili.com
+hostname = %APPEND% app.bilibili.com, m.bilibili.com
