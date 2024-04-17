@@ -1,0 +1,3 @@
+[submodule "Sing-Box/Rule"]
+	path = src/ENV
+	url = https://github.com/krisstibex/sing-box-ruleset.git
