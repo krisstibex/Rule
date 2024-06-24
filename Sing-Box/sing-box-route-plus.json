@@ -1,0 +1,492 @@
+{
+  "dns": {
+    "servers": [
+      {
+        "tag": "default-dns",
+        "address": "223.5.5.5",
+        "detour": "direct-out"
+      },
+      {
+        "tag": "system-dns",
+        "address": "local",
+        "detour": "direct-out"
+      },
+      {
+        "tag": "block-dns",
+        "address": "rcode://name_error"
+      },
+      {
+        "tag": "google",
+        "address": "https://dns.google/dns-query",
+        "address_resolver": "default-dns",
+        "address_strategy": "ipv4_only",
+        "strategy": "ipv4_only",
+        "client_subnet": "1.0.1.0"
+      }
+    ],
+    "rules": [
+      {
+        "outbound": "any",
+        "server": "default-dns"
+      },
+      {
+        "query_type": "HTTPS",
+        "server": "block-dns"
+      },
+      {
+        "clash_mode": "direct",
+        "server": "default-dns"
+      },
+      {
+        "clash_mode": "global",
+        "server": "google"
+      },
+      {
+        "rule_set": "China",
+        "server": "default-dns"
+      }
+    ],
+    "strategy": "ipv4_only",
+    "disable_cache": false,
+    "disable_expire": false,
+    "independent_cache": false,
+    "final": "google"
+  },
+  "route": {
+    "rules": [
+      {
+        "inbound": "dns-in",
+        "outbound": "dns-out"
+      },
+      {
+        "protocol": "dns",
+        "outbound": "dns-out"
+      },
+      {
+        "protocol": "quic",
+        "outbound": "block-out"
+      },
+      {
+        "clash_mode": "direct",
+        "outbound": "direct-out"
+      },
+      {
+        "clash_mode": "global",
+        "outbound": "GLOBAL"
+      },
+      {
+        "rule_set": "China",
+        "outbound": "direct-out"
+      },
+      {
+        "rule_set": "AD",
+        "outbound": "block"
+      },
+      {
+        "rule_set": "AppleProxy",
+        "outbound": "Proxy"
+      },
+      {
+        "rule_set": "Apple",
+        "outbound": "Direct"
+      },
+      {
+        "rule_set": "Github",
+        "outbound": "Github"
+      },
+      {
+        "rule_set": "Microsoft",
+        "outbound": "Microsoft"
+      },
+      {
+        "rule_set": "Telegram",
+        "outbound": "Telegram"
+      },
+      {
+        "rule_set": "Netflix",
+        "outbound": "Netflix"
+      },
+      {
+        "rule_set": "Disney+",
+        "outbound": "Disney+"
+      },
+      {
+        "rule_set": "Youtube",
+        "outbound": "Youtube"
+      },
+      {
+        "rule_set": "Google",
+        "outbound": "Youtube"
+      },
+      {
+        "rule_set": "Spotify",
+        "outbound": "Spotify"
+      },
+      {
+        "rule_set": "BiliBili",
+        "outbound": "BiliBili"
+      },
+      {
+        "rule_set": "Proxy",
+        "outbound": "Proxy"
+      },
+      {
+        "rule_set": "China",
+        "outbound": "Direct"
+      }
+    ],
+    "rule_set": [
+      {
+        "tag": "AD",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/krisstibex/Sing-Rule/releases/latest/download/adrules.srs",
+        "download_detour": "Github"
+      },
+      {
+        "tag": "AppleProxy",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/krisstibex/Sing-Rule/releases/latest/download/AppleProxy.srs",
+        "download_detour": "Github"
+      },
+      {
+        "tag": "Apple",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/krisstibex/Sing-Rule/releases/latest/download/Apple_Classical.srs",
+        "download_detour": "Github"
+      },
+      {
+        "tag": "Github",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/krisstibex/Sing-Rule/releases/latest/download/GitHub.srs",
+        "download_detour": "Github"
+      },
+      {
+        "tag": "Microsoft",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/krisstibex/Sing-Rule/releases/latest/download/Microsoft.srs",
+        "download_detour": "Github"
+      },
+      {
+        "tag": "Telegram",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/krisstibex/Sing-Rule/releases/latest/download/telegram.srs",
+        "download_detour": "Github"
+      },
+      {
+        "tag": "Netflix",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/krisstibex/Sing-Rule/releases/latest/download/Netflix_Classical.srs",
+        "download_detour": "Github"
+      },
+      {
+        "tag": "Disney+",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/krisstibex/Sing-Rule/releases/latest/download/Disney.srs",
+        "download_detour": "Github"
+      },
+      {
+        "tag": "Youtube",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/krisstibex/Sing-Rule/releases/latest/download/YouTube.srs",
+        "download_detour": "Github"
+      },
+      {
+        "tag": "Google",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/krisstibex/Sing-Rule/releases/latest/download/Google.srs",
+        "download_detour": "Github"
+      },
+      {
+        "tag": "Spotify",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/krisstibex/Sing-Rule/releases/latest/download/Spotify.srs",
+        "download_detour": "Github"
+      },
+      {
+        "tag": "BiliBili",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/krisstibex/Sing-Rule/releases/latest/download/BiliBili.srs",
+        "download_detour": "Github"
+      },
+      {
+        "tag": "Proxy",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/krisstibex/Sing-Rule/releases/latest/download/Proxy_Classical.srs",
+        "download_detour": "Github"
+      },
+      {
+        "tag": "China",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/krisstibex/Sing-Rule/releases/latest/download/ChinaMax_Classical.srs",
+        "download_detour": "Github"
+      }
+    ],
+    "final": "Final",
+    "auto_detect_interface": true
+  },
+  "outbounds": [
+    {
+      "tag": "Microsoft",
+      "type": "selector",
+      "outbounds": [
+        "HongKong",
+        "Taiwan",
+        "Japan",
+        "Singapore",
+        "USA",
+        "All",
+        "Direct"
+      ],
+      "default": "Direct"
+    },
+    {
+      "tag": "Github",
+      "type": "selector",
+      "outbounds": [
+        "HongKong",
+        "Taiwan",
+        "Japan",
+        "Singapore",
+        "USA",
+        "All",
+        "Direct"
+      ],
+      "default": "HongKong"
+    },
+    {
+      "tag": "Telegram",
+      "type": "selector",
+      "outbounds": [
+        "Direct",
+        "HongKong",
+        "Taiwan",
+        "Singapore",
+        "Japan",
+        "USA",
+        "All"
+      ],
+      "default": "Singapore"
+    },
+    {
+      "tag": "Netflix",
+      "type": "selector",
+      "outbounds": [
+        "Direct",
+        "HongKong",
+        "Taiwan",
+        "Singapore",
+        "Japan",
+        "USA",
+        "All"
+      ],
+      "default": "Singapore"
+    },
+    {
+      "tag": "Disney+",
+      "type": "selector",
+      "outbounds": [
+        "Direct",
+        "HongKong",
+        "Taiwan",
+        "Singapore",
+        "Japan",
+        "USA",
+        "All"
+      ],
+      "default": "USA"
+    },
+    {
+      "tag": "Youtube",
+      "type": "selector",
+      "outbounds": [
+        "Direct",
+        "HongKong",
+        "Taiwan",
+        "Singapore",
+        "Japan",
+        "USA",
+        "All"
+      ],
+      "default": "USA"
+    },
+    {
+      "tag": "Spotify",
+      "type": "selector",
+      "outbounds": [
+        "Direct",
+        "HongKong",
+        "Taiwan",
+        "Singapore",
+        "Japan",
+        "USA",
+        "All"
+      ],
+      "default": "Direct"
+    },
+    {
+      "tag": "BiliBili",
+      "type": "selector",
+      "outbounds": [
+        "Direct",
+        "HongKong",
+        "Taiwan"
+      ],
+      "default": "Direct"
+    },
+    {
+      "tag": "Proxy",
+      "type": "selector",
+      "outbounds": [
+        "Direct",
+        "HongKong",
+        "Taiwan",
+        "Singapore",
+        "Japan",
+        "USA",
+        "All"
+      ],
+      "default": "USA"
+    },
+    {
+      "tag": "GLOBAL",
+      "type": "selector",
+      "outbounds": [
+        "Direct",
+        "HongKong",
+        "Taiwan",
+        "Singapore",
+        "Japan",
+        "USA",
+        "All"
+      ],
+      "default": "USA"
+    },
+    {
+      "tag": "Final",
+      "type": "selector",
+      "outbounds": [
+        "Direct",
+        "Proxy"
+      ],
+      "default": "Proxy"
+    },
+    {
+      "tag": "HongKong",
+      "type": "selector",
+      "outbounds": []
+    },
+    {
+      "tag": "Taiwan",
+      "type": "selector",
+      "outbounds": []
+    },
+    {
+      "tag": "Singapore",
+      "type": "selector",
+      "outbounds": []
+    },
+    {
+      "tag": "Japan",
+      "type": "selector",
+      "outbounds": []
+    },
+    {
+      "tag": "USA",
+      "type": "selector",
+      "outbounds": []
+    },
+    {
+      "tag": "All",
+      "type": "selector",
+      "outbounds": []
+    },
+    {
+      "tag": "Direct",
+      "type": "direct"
+    },
+    {
+      "tag": "block",
+      "type": "block"
+    },
+    {
+      "type": "direct",
+      "tag": "direct-out",
+      "routing_mark": 100
+    },
+    {
+      "type": "block",
+      "tag": "block-out"
+    },
+    {
+      "type": "dns",
+      "tag": "dns-out"
+    }
+  ],
+  "inbounds": [
+    {
+      "type": "direct",
+      "tag": "dns-in",
+      "listen": "::",
+      "listen_port": 7892
+    },
+    {
+      "type": "mixed",
+      "tag": "mixed-in",
+      "listen": "::",
+      "listen_port": 7890,
+      "sniff": true,
+      "sniff_override_destination": false,
+      "set_system_proxy": false
+    },
+    {
+      "type": "redirect",
+      "tag": "redirect-in",
+      "listen": "::",
+      "listen_port": 7891,
+      "sniff": true,
+      "sniff_override_destination": false
+    },
+    {
+      "type": "tun",
+      "tag": "tun-in",
+      "inet4_address": "172.19.0.1/30",
+      "mtu": 9000,
+      "gso": true,
+      "auto_route": true,
+      "stack": "system",
+      "sniff": true,
+      "sniff_override_destination": false
+}
+  ],
+  "experimental": {
+    "clash_api": {
+      "external_controller": "127.0.0.1:9090",
+      "external_ui": "ui",
+      "external_ui_download_url": "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip",
+      "external_ui_download_detour": "Github"
+    },
+    "cache_file": {
+      "enabled": true,
+      "store_fakeip": true
+    }
+  },
+  "log": {
+    "disabled": false,
+    "level": "info",
+    "timestamp": true
+  }
+}
