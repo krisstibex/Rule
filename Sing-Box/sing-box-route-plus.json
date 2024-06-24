@@ -2,81 +2,92 @@
   "dns": {
     "servers": [
       {
-        "tag": "default-dns",
-        "address": "223.5.5.5",
-        "detour": "direct-out"
-      },
-      {
-        "tag": "system-dns",
-        "address": "local",
-        "detour": "direct-out"
-      },
-      {
-        "tag": "block-dns",
-        "address": "rcode://name_error"
-      },
-      {
         "tag": "google",
-        "address": "https://dns.google/dns-query",
-        "address_resolver": "default-dns",
-        "address_strategy": "ipv4_only",
-        "strategy": "ipv4_only",
-        "client_subnet": "1.0.1.0"
+        "address": "tls://8.8.8.8"
+      },
+      {
+        "tag": "local",
+        "address": "https://223.5.5.5/dns-query",
+        "detour": "Direct"
       }
     ],
     "rules": [
       {
         "outbound": "any",
-        "server": "default-dns"
+        "server": "local"
       },
       {
-        "query_type": "HTTPS",
-        "server": "block-dns"
+        "clash_mode": "Direct",
+        "server": "local"
       },
       {
-        "clash_mode": "direct",
-        "server": "default-dns"
-      },
-      {
-        "clash_mode": "global",
+        "clash_mode": "Global",
         "server": "google"
       },
       {
-        "rule_set": "China",
-        "server": "default-dns"
+        "rule_set": "geosite-geolocation-cn",
+        "server": "local"
+      },
+      {
+        "type": "logical",
+        "mode": "and",
+        "rules": [
+          {
+            "rule_set": "geosite-geolocation-!cn",
+            "invert": true
+          },
+          {
+            "rule_set": "geoip-cn"
+          }
+        ],
+        "server": "google",
+        "client_subnet": "223.5.5.5/24"
       }
-    ],
-    "strategy": "ipv4_only",
-    "disable_cache": false,
-    "disable_expire": false,
-    "independent_cache": false,
-    "final": "google"
+    ]
   },
   "route": {
     "rules": [
       {
-        "inbound": "dns-in",
+        "type": "logical",
+        "mode": "or",
+        "rules": [
+          {
+            "protocol": "dns"
+          },
+          {
+            "port": 53
+          }
+        ],
         "outbound": "dns-out"
       },
       {
-        "protocol": "dns",
-        "outbound": "dns-out"
+        "ip_is_private": true,
+        "outbound": "Direct"
       },
       {
-        "protocol": "quic",
-        "outbound": "block-out"
+        "clash_mode": "Direct",
+        "outbound": "Direct"
       },
       {
-        "clash_mode": "direct",
-        "outbound": "direct-out"
-      },
-      {
-        "clash_mode": "global",
+        "clash_mode": "Global",
         "outbound": "GLOBAL"
       },
-      {
-        "rule_set": "China",
-        "outbound": "direct-out"
+			{
+        "type": "logical",
+        "mode": "or",
+        "rules": [
+          {
+            "port": 853
+          },
+          {
+            "network": "udp",
+            "port": 443
+          },
+          {
+            "protocol": "stun"
+          }
+        ],
+        "outbound": "block"
       },
       {
         "rule_set": "AD",
@@ -127,11 +138,14 @@
         "outbound": "BiliBili"
       },
       {
-        "rule_set": "Proxy",
+        "rule_set": "geosite-geolocation-!cn",
         "outbound": "Proxy"
       },
       {
-        "rule_set": "China",
+        "rule_set": [
+				"geosite-geolocation-cn",
+				"geoip-cn"
+				],
         "outbound": "Direct"
       }
     ],
@@ -221,18 +235,25 @@
         "download_detour": "Github"
       },
       {
-        "tag": "Proxy",
         "type": "remote",
+        "tag": "geosite-geolocation-cn",
         "format": "binary",
-        "url": "https://github.com/krisstibex/Sing-Rule/releases/latest/download/Proxy_Classical.srs",
-        "download_detour": "Github"
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-geolocation-cn.srs",
+				"download_detour": "Github"
       },
       {
-        "tag": "China",
         "type": "remote",
+        "tag": "geosite-geolocation-!cn",
         "format": "binary",
-        "url": "https://github.com/krisstibex/Sing-Rule/releases/latest/download/ChinaMax_Classical.srs",
-        "download_detour": "Github"
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-geolocation-!cn.srs",
+				"download_detour": "Github"
+      },
+      {
+        "type": "remote",
+        "tag": "geoip-cn",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-cn.srs",
+				"download_detour": "Github"
       }
     ],
     "final": "Final",
@@ -423,65 +444,44 @@
       "type": "block"
     },
     {
-      "type": "direct",
-      "tag": "direct-out",
-      "routing_mark": 100
-    },
-    {
-      "type": "block",
-      "tag": "block-out"
-    },
-    {
-      "type": "dns",
-      "tag": "dns-out"
+      "tag": "dns-out",
+      "type": "dns"
     }
   ],
   "inbounds": [
     {
-      "type": "direct",
-      "tag": "dns-in",
-      "listen": "::",
-      "listen_port": 7892
+      "type": "tun",
+      "inet4_address": "172.19.0.0/30",
+      "inet6_address": "fdfe:dcba:9876::0/126",
+      "stack": "system",
+      "auto_route": true,
+      "sniff": true,
+      "platform": {
+        "http_proxy": {
+          "enabled": true,
+          "server": "127.0.0.1",
+          "server_port": 7890
+        }
+      }
     },
     {
       "type": "mixed",
-      "tag": "mixed-in",
-      "listen": "::",
+      "listen": "127.0.0.1",
       "listen_port": 7890,
-      "sniff": true,
-      "sniff_override_destination": false,
-      "set_system_proxy": false
-    },
-    {
-      "type": "redirect",
-      "tag": "redirect-in",
-      "listen": "::",
-      "listen_port": 7891,
-      "sniff": true,
-      "sniff_override_destination": false
-    },
-    {
-      "type": "tun",
-      "tag": "tun-in",
-      "inet4_address": "172.19.0.1/30",
-      "mtu": 9000,
-      "gso": true,
-      "auto_route": true,
-      "stack": "system",
-      "sniff": true,
-      "sniff_override_destination": false
-}
+      "sniff": true
+    }
   ],
   "experimental": {
     "clash_api": {
       "external_controller": "127.0.0.1:9090",
       "external_ui": "ui",
       "external_ui_download_url": "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip",
-      "external_ui_download_detour": "Github"
+      "external_ui_download_detour": "Github",
+			"default_mode": "Enhanced"
     },
     "cache_file": {
       "enabled": true,
-      "store_fakeip": true
+      "store_rdrc": true
     }
   },
   "log": {
