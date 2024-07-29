@@ -1,6 +1,7 @@
 # NAME: WarZone Mobile
 # AUTHOR: Miku404
 
+# IP
 IP-CIDR,5.188.0.0/16,no-resolve
 IP-CIDR,5.120.0.0/16,no-resolve
 IP-CIDR,10.148.0.0/16,no-resolve
@@ -65,22 +66,13 @@ IP-CIDR,217.69.0.0/16,no-resolve
 IP-CIDR,207.148.0.0/16,no-resolve
 IP-CIDR,209.192.0.0/16,no-resolve
 IP-CIDR,209.250.0.0/16,no-resolve
-# DEST-PORT,30002
-DOMAIN-SUFFIX,callofduty.com
-DOMAIN-SUFFIX,demonware.net
-DOMAIN-SUFFIX,activision.com
+# Domain
+DOMAIN-WILDCARD,*.callofduty.com
+DOMAIN-WILDCARD,*.demonware.net
+DOMAIN-WILDCARD,*.activision.com
 DOMAIN-SUFFIX,telescope.callofduty.com
-DOMAIN,www.callofduty.com
-DOMAIN,dev.cdni.callofduty.com
-DOMAIN,prod.cdni.callofduty.com
-DOMAIN,cod-assets.cdn.callofduty.com
-DOMAIN,wzm-gvs.prod.demonware.net
-DOMAIN,genesis.stun.eu.demonware.net
-DOMAIN,genesis.stun.us.demonware.net
-DOMAIN,timberwolf-lobby.prod.demonware.net
-DOMAIN,prod-data-energon.infra-ext.activision.com
 DOMAIN,d103o8jcukv8ws.cloudfront.net
 AND,((DOMAIN-SUFFIX,appsflyersdk.com), (DOMAIN-KEYWORD,evt75q))
 
-# wzm-ios-loginservice.prod.demonware.net 
+# AND,((DOMAIN-WILDCARD,*.prod.demonware.net), (DOMAIN-KEYWORD,loginservice))
 # 此域名为WZM发布地区验证 仅代理本域名即可直连游玩WZM
