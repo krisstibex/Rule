@@ -1,7 +1,8 @@
 # NAME: WarZone Mobile
 # AUTHOR: Miku404
 
-# IP标准输出：IP-CIDR,5.120.0.0/16,no-resolve
+# IP
+IP-CIDR,5.120.0.0/16,no-resolve
 IP-CIDR,5.188.0.0/16,no-resolve
 IP-CIDR,10.148.0.0/16,no-resolve
 IP-CIDR,10.170.0.0/16,no-resolve
