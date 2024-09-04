@@ -1,0 +1,16 @@
+{
+  "author": "Yachen Liu",
+  "links": {
+    "home": null,
+    "gitbook": false,
+    "sidebar": {
+        "Back to Surge Website": "http://nssurge.com"
+    }
+  },
+  "variables": {
+    "BETA": "<img src='../beta@2x.png' width='40' />",
+    "NEW": "<img src='../new@2x.png' width='40' />"
+  },
+  "plugins": ["hints"]
+}
+

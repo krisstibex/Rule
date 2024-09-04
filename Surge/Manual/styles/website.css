@@ -1,0 +1,30 @@
+/* CSS for website */
+
+
+.alert {
+	padding: 15px;
+	border-radius: 0.5rem;
+	border-bottom: 0;
+}
+
+.alert p {
+	margin-bottom: 0;
+}
+
+.alert-info {
+	border-left: 5px solid #bce8f1;
+}
+
+
+.alert-success {
+	border-left: 5px solid #d6e9c6;
+}
+
+.alert-danger {
+	border-left: 5px solid #ebccd1;
+}
+
+.alert-warning {
+	border-left: 5px solid #faebcc;
+}
+
