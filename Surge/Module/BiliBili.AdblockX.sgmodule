@@ -6,10 +6,10 @@
 BiliBili.Modified.x.resource.show.skin = type=http-response, pattern=^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\?, requires-body=1, script-path=https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBili.Modified.response.js, argument=
 # 此条注释 会与去广告冲突 
 # BiliBili.Modified.x.v2 = type=http-response, pattern=^https:\/\/app\.bilibili\.com\/x\/v2\/(account\/(myinfo|mine)|space), requires-body=1, script-path=https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBili.Modified.response.js, argument=
-BiliBili.Modified.x.vip = type=http-response, pattern=^https:\/\/api\.bilibili\.com\/x\/vip\/(web\/vip_center\/combine|price\/panel\/lexi|top_panel_info), requires-body=1, script-path=https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBili.Modified.response.js, argument=
+# BiliBili.Modified.x.vip = type=http-response, pattern=^https:\/\/api\.bilibili\.com\/x\/vip\/(web\/vip_center\/combine|price\/panel\/lexi|top_panel_info), requires-body=1, script-path=https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBili.Modified.response.js, argument=
 
-BiliBili.Search = type=http-response, pattern=^https://app.bilibili.com/x/v2/search/square, script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js, requires-body=true, max-size=-1, timeout=60
-BiliBili.CC = type=http-response, pattern=^https?:\/\/.*\.hdslb\.com\/bfs\/subtitle\/.+\.json, script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_cc.js, requires-body=true, max-size=-1, timeout=60
+# BiliBili.Search = type=http-response, pattern=^https://app.bilibili.com/x/v2/search/square, script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js, requires-body=true, max-size=-1, timeout=60
+# BiliBili.CC = type=http-response, pattern=^https?:\/\/.*\.hdslb\.com\/bfs\/subtitle\/.+\.json, script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_cc.js, requires-body=true, max-size=-1, timeout=60
 
 [MITM]
 hostname = %APPEND%  app.bilibili.com, api.bilibili.com
