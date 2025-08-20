@@ -63,46 +63,31 @@
       "type": "selector",
       "tag": "🇭🇰 香港",
       "interrupt_exist_connections": true,
-      "include": "(🇭🇰)|(香港)|(Hong)|(HK)",
-      "providers": [
-        "miku"
-      ]
+      "outbounds": []
     },
     {
       "type": "selector",
       "tag": "🇹🇼 台湾",
       "interrupt_exist_connections": true,
-      "include": "(🇨🇳)|(台湾)|(Tai)|(TW)",
-      "providers": [
-        "miku"
-      ]
+      "outbounds": []
     },
     {
       "type": "selector",
       "tag": "🇸🇬 新加坡",
       "interrupt_exist_connections": true,
-      "include": "(🇸🇬)|(新加坡)|(Singapore)|(SG)",
-      "providers": [
-        "miku"
-      ]
+      "outbounds": []
     },
     {
       "type": "selector",
       "tag": "🇯🇵 日本",
       "interrupt_exist_connections": true,
-      "include": "(🇯🇵)|(日本)|(Japan)|(JP)",
-      "providers": [
-        "miku"
-      ]
+      "outbounds": []
     },
     {
       "type": "selector",
       "tag": "🇺🇸 美国",
       "interrupt_exist_connections": true,
-      "include": "(🇺🇸)|(美国)|(States)|(US)",
-      "providers": [
-        "miku"
-      ]
+      "outbounds": []
     },
     {
       "type": "selector",
