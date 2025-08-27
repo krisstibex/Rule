@@ -3,21 +3,7 @@
     "disabled": false,
     "level": "info",
     "timestamp": true,
-    "output": ""
-  },
-  "experimental": {
-    "clash_api": {
-      "external_controller": "127.0.0.1:9090",
-      "external_ui": "ui",
-      "external_ui_download_url": "https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip",
-      "external_ui_download_detour": "🇭🇰 香港",
-      "default_mode": "rule"
-    },
-    "cache_file": {
-      "enabled": true,
-      "path": "cache.db",
-      "store_fakeip": false
-    }
+    "output": "sing-box.log"
   },
   "ntp": {
     "enabled": true,
@@ -25,13 +11,6 @@
     "server_port": 123,
     "interval": "30m"
   },
-  "providers": [
-    {
-      "type": "local",
-      "path":"flower.json",
-      "tag": "miku"
-    }
-  ],
   "inbounds": [
     {
       "type": "mixed",
@@ -91,6 +70,12 @@
     },
     {
       "type": "selector",
+      "tag": "🏳️ 其他",
+      "interrupt_exist_connections": true,
+      "outbounds": []
+    },
+    {
+      "type": "selector",
       "tag": "🔍 Bing",
       "interrupt_exist_connections": true,
       "outbounds": [
@@ -129,6 +114,19 @@
         "🇺🇸 美国"
       ],
       "default": "🇺🇸 美国"
+    },
+    {
+      "type": "selector",
+      "tag": "💿 Spotify",
+      "interrupt_exist_connections": true,
+      "outbounds": [
+        "🇭🇰 香港",
+        "🇹🇼 台湾",
+        "🇸🇬 新加坡",
+        "🇯🇵 日本",
+        "🇺🇸 美国"
+      ],
+      "default": "🇭🇰 香港"
     },
     {
       "type": "selector",
@@ -277,7 +275,8 @@
         "🇹🇼 台湾",
         "🇸🇬 新加坡",
         "🇯🇵 日本",
-        "🇺🇸 美国"
+        "🇺🇸 美国",
+        "🏳️ 其他"
       ]
     }
   ],
@@ -324,6 +323,26 @@
         "rule_set": [
           "Category-Ads"
         ]
+      },
+      {
+        "action": "route",
+        "domain_suffix": [
+          "arpa",
+          "local",
+          ".in-addr.arpa",
+          ".ip6.arpa",
+          "b._dns-sd._udp",
+          "db._dns-sd._udp",
+          "lb._dns-sd._udp"
+        ],
+        "outbound": "🇨🇳 直连"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "Apple"
+        ],
+        "outbound": "🇨🇳 直连"
       },
       {
         "action": "route",
@@ -377,6 +396,13 @@
           "哔哩国际"
         ],
         "outbound": "🎥 bilibili"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "Spotify"
+        ],
+        "outbound": "💿 Spotify"
       },
       {
         "action": "route",
@@ -452,163 +478,177 @@
     ],
     "rule_set": [
       {
+        "tag": "Category-Ads",
+        "type": "remote",
+        "url": "https://adrules.top/adrules-singbox.srs",
+        "format": "binary",
+        "download_detour": "🇭🇰 香港"
+      },
+      {
+        "tag": "Apple",
+        "type": "remote",
+        "url": "https://git.repcz.link/raw.githubusercontent.com/Repcz/Tool/X/sing-box/Rules/Apple.srs",
+        "format": "binary",
+        "download_detour": "🇭🇰 香港"
+      },
+      {
+        "tag": "Spotify",
+        "type": "remote",
+        "url": "https://git.repcz.link/raw.githubusercontent.com/Repcz/Tool/X/sing-box/Rules/Spotify.srs",
+        "format": "binary",
+        "download_detour": "🇭🇰 香港"
+      },
+      {
         "tag": "OpenAI",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/refs/heads/rule-set/geosite-openai.srs",
+        "url": "https://git.repcz.link/raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-openai.srs",
         "format": "binary",
         "download_detour": "🇭🇰 香港"
       },
       {
         "tag": "Claude",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/refs/heads/rule-set/geosite-anthropic.srs",
+        "url": "https://git.repcz.link/raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-anthropic.srs",
         "format": "binary",
         "download_detour": "🇭🇰 香港"
       },
       {
         "tag": "Gemini",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/refs/heads/rule-set/geosite-google-gemini.srs",
+        "url": "https://git.repcz.link/raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-google-gemini.srs",
         "format": "binary",
         "download_detour": "🇭🇰 香港"
       },
       {
         "tag": "Bing",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/refs/heads/rule-set/geosite-bing.srs",
+        "url": "https://git.repcz.link/raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-bing.srs",
         "format": "binary",
         "download_detour": "🇭🇰 香港"
       },
       {
         "tag": "Bing-CN",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/refs/heads/rule-set/geosite-bing@cn.srs",
+        "url": "https://git.repcz.link/raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-bing@cn.srs",
         "format": "binary",
         "download_detour": "🇭🇰 香港"
       },
       {
         "tag": "Youtube",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/refs/heads/rule-set/geosite-youtube.srs",
+        "url": "https://git.repcz.link/raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-youtube.srs",
         "format": "binary",
         "download_detour": "🇭🇰 香港"
       },
       {
         "tag": "FaceBook",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/refs/heads/rule-set/geosite-facebook.srs",
+        "url": "https://git.repcz.link/raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-facebook.srs",
         "format": "binary",
         "download_detour": "🇭🇰 香港"
       },
       {
         "tag": "X",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/refs/heads/rule-set/geosite-x.srs",
+        "url": "https://git.repcz.link/raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-x.srs",
         "format": "binary",
         "download_detour": "🇭🇰 香港"
       },
       {
         "tag": "Github",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/refs/heads/rule-set/geosite-github.srs",
+        "url": "https://git.repcz.link/raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-github.srs",
         "format": "binary",
         "download_detour": "🇭🇰 香港"
       },
       {
         "tag": "Netflix",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/refs/heads/rule-set/geosite-netflix.srs",
+        "url": "https://git.repcz.link/raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-netflix.srs",
         "format": "binary",
         "download_detour": "🇭🇰 香港"
       },
       {
         "tag": "Disney",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/refs/heads/rule-set/geosite-disney.srs",
+        "url": "https://git.repcz.link/raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-disney.srs",
         "format": "binary",
         "download_detour": "🇭🇰 香港"
       },
       {
         "tag": "哔哩国际",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/refs/heads/rule-set/geosite-bilibili.srs",
+        "url": "https://git.repcz.link/raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-bilibili.srs",
         "format": "binary",
         "download_detour": "🇭🇰 香港"
       },
       {
         "tag": "TikTok",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/refs/heads/rule-set/geosite-tiktok.srs",
+        "url": "https://git.repcz.link/raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-tiktok.srs",
         "format": "binary",
         "download_detour": "🇭🇰 香港"
       },
       {
         "tag": "Telegram",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/refs/heads/rule-set/geosite-telegram.srs",
+        "url": "https://git.repcz.link/raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-telegram.srs",
         "format": "binary",
         "download_detour": "🇭🇰 香港"
       },
       {
         "tag": "Telegram_asn",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/yyhhyyyyyy/sing-box-ruleset/main/ip/telegram_asn.srs",
+        "url": "https://git.repcz.link/raw.githubusercontent.com/yyhhyyyyyy/sing-box-ruleset/main/ip/telegram_asn.srs",
         "format": "binary",
         "download_detour": "🇭🇰 香港"
       },
       {
         "tag": "Telegram_IP",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/yyhhyyyyyy/sing-box-ruleset/main/ip/telegram.srs",
+        "url": "https://git.repcz.link/raw.githubusercontent.com/yyhhyyyyyy/sing-box-ruleset/main/ip/telegram.srs",
         "format": "binary",
         "download_detour": "🇭🇰 香港"
       },
       {
         "tag": "Google",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/refs/heads/rule-set/geosite-google.srs",
-        "format": "binary",
-        "download_detour": "🇭🇰 香港"
-      },
-      {
-        "tag": "Category-Ads",
-        "type": "remote",
-        "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/category-ads-all.srs",
+        "url": "https://git.repcz.link/raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-google.srs",
         "format": "binary",
         "download_detour": "🇭🇰 香港"
       },
       {
         "tag": "GeoIP-Private",
         "type": "remote",
-        "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geoip/private.srs",
+        "url": "https://git.repcz.link/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/private.srs",
         "format": "binary",
         "download_detour": "🇭🇰 香港"
       },
       {
         "tag": "GeoSite-Private",
         "type": "remote",
-        "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/private.srs",
+        "url": "https://git.repcz.link/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/private.srs",
         "format": "binary",
         "download_detour": "🇭🇰 香港"
       },
       {
         "tag": "GeoIP-CN",
         "type": "remote",
-        "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geoip/cn.srs",
+        "url": "https://git.repcz.link/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/cn.srs",
         "format": "binary",
         "download_detour": "🇭🇰 香港"
       },
       {
         "tag": "GeoSite-CN",
         "type": "remote",
-        "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/cn.srs",
+        "url": "https://git.repcz.link/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/cn.srs",
         "format": "binary",
         "download_detour": "🇭🇰 香港"
       },
       {
         "tag": "GeoLocation-!CN",
         "type": "remote",
-        "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/geolocation-!cn.srs",
+        "url": "https://git.repcz.link/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/geolocation-!cn.srs",
         "format": "binary",
         "download_detour": "🇭🇰 香港"
       }
@@ -621,6 +661,10 @@
   },
   "dns": {
     "servers": [
+      {
+        "type": "local",
+        "tag": "system"
+      },
       {
         "tag": "local",
         "type": "udp",
@@ -654,6 +698,18 @@
         "server": "local"
       },
       {
+        "domain_suffix": [
+          "arpa",
+          "local",
+          ".in-addr.arpa",
+          ".ip6.arpa",
+          "b._dns-sd._udp",
+          "db._dns-sd._udp",
+          "lb._dns-sd._udp"
+        ],
+        "server": "system"
+      },
+      {
         "clash_mode": "global",
         "server": "foreign"
       },
@@ -675,5 +731,19 @@
     "final": "foreign",
     "strategy": "ipv4_only",
     "independent_cache": true
+  },
+  "experimental": {
+    "clash_api": {
+      "external_controller": "[::]:9090",
+      "external_ui": "ui",
+      "secret": "Miku",
+      "external_ui_download_url": "https://git.repcz.link/github.com/Zephyruso/zashboard/releases/latest/download/dist.zip",
+      "default_mode": "rule"
+    },
+    "cache_file": {
+      "enabled": true,
+      "path": "cache.db",
+      "store_fakeip": false
+    }
   }
 }
